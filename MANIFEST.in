@@ -1,0 +1,11 @@
+include dash_arcgis_open/dash_arcgis_open.min.js
+include dash_arcgis_open/dash_arcgis_open.min.js.map
+include dash_arcgis_open/async-*.js
+include dash_arcgis_open/async-*.js.map
+include dash_arcgis_open/*-shared.js
+include dash_arcgis_open/*-shared.js.map
+include dash_arcgis_open/metadata.json
+include dash_arcgis_open/package-info.json
+include README.md
+include LICENSE
+include package.json
