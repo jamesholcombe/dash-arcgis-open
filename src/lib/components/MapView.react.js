@@ -4,64 +4,74 @@ import { Map } from '@esri/react-arcgis';
 
 
 
+
 // I need to pass the style to the div holding map.
 
 
 
-export default class DashArcGISOpen extends Component {
+export default class MapView extends Component {
+
+    handleClick = (event) => {
+
+    }
+    
     render() {
-        const {id, label, setProps, value} = this.props;
+        const {id,  setProps,} = this.props;
+
+        console.log(this.props);
         const mapStyle = {
-            width: "500px",
-            height: "500px",
+            width: '100%',
+            height: '100%',
             
           };
 
+         
+
         return (
-            <div id={id}  >
 
-                <div style={mapStyle}>
+            <div id={id} style = {mapStyle}>
+
+                <div >
+                   
                 
-                <Map />
-
+                <Map 
+                mapProperties ={ 
+                    e => setProps({ value: e.target.mapProperties })
+                        
+                    }
+                />
                 <input
-                    value={value}
+                    
                     onChange={
                         /*
-                        * Send the new value to the parent component.
+                         * Send the new value to the parent component.
                          * setProps is a prop that is automatically supplied
                          * by dash's front-end ("dash-renderer").
                          * In a Dash app, this will update the component's
                          * props and send the data back to the Python Dash
                          * app server if a callback uses the modified prop as
                          * Input or State.
-                        */
-                       e => setProps({ value: e.target.value })
+                         */
+                        e => setProps({ id: e.target.id })
                     }
-                    />
-                    </div>
+                />
+                </div>
+
+
             </div>
         );
     }
 }
 
-DashArcGISOpen.defaultProps = {};
+MapView.defaultProps = {};
 
-DashArcGISOpen.propTypes = {
+MapView.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
     id: PropTypes.string,
 
-    /**
-     * A label that will be printed when this component is rendered.
-     */
-    label: PropTypes.string.isRequired,
 
-    /**
-     * The value displayed in the input.
-     */
-    value: PropTypes.string,
 
     /**
      * Dash-assigned callback that should be called to report property changes

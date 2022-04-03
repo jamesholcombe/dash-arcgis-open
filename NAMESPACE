@@ -1,4 +1,6 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 export(DashArcgisOpen)
+export(MapView)
 export(dashArcgisOpen)
+export(mapView)
