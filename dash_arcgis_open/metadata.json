@@ -37,20 +37,7 @@
   "src/lib/components/MapView.react.js": {
     "description": "",
     "displayName": "MapView",
-    "methods": [
-      {
-        "name": "handleClick",
-        "docblock": null,
-        "modifiers": [],
-        "params": [
-          {
-            "name": "event",
-            "type": null
-          }
-        ],
-        "returns": null
-      }
-    ],
+    "methods": [],
     "props": {
       "id": {
         "type": {
@@ -58,6 +45,13 @@
         },
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
       },
       "setProps": {
         "type": {

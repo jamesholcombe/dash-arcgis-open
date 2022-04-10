@@ -11,50 +11,28 @@ import { Map } from '@esri/react-arcgis';
 
 export default class MapView extends Component {
 
-    handleClick = (event) => {
-
-    }
     
     render() {
-        const {id,  setProps,} = this.props;
+        const {id,  style, setProps} = this.props;
 
         console.log(this.props);
-        const mapStyle = {
-            width: '100%',
-            height: '100%',
-            
-          };
+        console.log(style)
 
-         
 
         return (
 
-            <div id={id} style = {mapStyle}>
+            <div id={id} style={style}>
 
                 <div >
                    
                 
-                <Map 
-                mapProperties ={ 
-                    e => setProps({ value: e.target.mapProperties })
+                <Map style= {style}
+                // mapProperties ={ 
+                //     e => setProps({ value: e.target.mapProperties })
                         
-                    }
+                    // }
                 />
-                <input
-                    
-                    onChange={
-                        /*
-                         * Send the new value to the parent component.
-                         * setProps is a prop that is automatically supplied
-                         * by dash's front-end ("dash-renderer").
-                         * In a Dash app, this will update the component's
-                         * props and send the data back to the Python Dash
-                         * app server if a callback uses the modified prop as
-                         * Input or State.
-                         */
-                        e => setProps({ id: e.target.id })
-                    }
-                />
+                
                 </div>
 
 
@@ -69,10 +47,50 @@ MapView.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
+    
+    animation: PropTypes.object,
+    
+    basemap : PropTypes.string,
+    
+    //breakpoints: PropTypes.object,
+    
+    center : PropTypes.array,
+    
+    //constraints : PropTypes.object,
+    
+    //currCords : PropTypes.array,
+    
+    //extent : PropTypes.object,
+    
+    // heightBreakpoints : PropTypes.string,
+    
+    // highlightOptions : PropTypes.object,
+    
     id: PropTypes.string,
+    
+    // oauthCreds: PropTypes.object,
+    
+    // orientation: PropTypes.string,
 
+    // resizeAlign: PropTypes.string,
+    
+    // resolution: PropTypes.number,
+    
+    // scale: PropTypes.number,
+    
+    style : PropTypes.object,
 
+    type : PropTypes.object,
 
+    viewPoint : PropTypes.object,
+
+    widthBreakpoint : PropTypes.string,
+
+    zoom : PropTypes.number,
+    
+
+    
+    
     /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.

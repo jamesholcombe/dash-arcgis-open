@@ -1,4 +1,4 @@
-import dash_arcgis_open
+from dash_arcgis_open import MapView
 import dash
 from dash.dependencies import Input, Output, State
 import dash_html_components as html
@@ -14,27 +14,23 @@ app.layout = html.Div([
 
 
 html.Div([
-    dash_arcgis_open.DashArcgisOpen(
-        "asdf",
-        'main-map',
-        "asdff"
+    MapView(
        
+        'main-map',
+        style = {'width': '300px', 'height': '300px', 'backgroundColor': 'black'},
+        
     ),
    
 ],
-style = {
-        'width': '500px',
-        'height': '500px'
-    }),
-    html.Div(id='output'),
-    dcc.Input(id = 'input-1', value = 'initial value'),
+
+    ),
 ])
 
 
-@app.callback(Output('output', 'children'), [Input('input-1', 'value'), State('asdf', 'id')])
+@app.callback(Output('output', 'children'), [Input('input-1', 'value')], [State('main-map', 'id')])
 def display_output(value, map_id):
     return 'You have entered {}'.format(value)
 
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__ == "__main__":
+    app.server.run(host="0.0.0.0", port=8080, debug=True)

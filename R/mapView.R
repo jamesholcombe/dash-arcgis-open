@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-mapView <- function(id=NULL) {
+mapView <- function(id=NULL, style=NULL) {
     
-    props <- list(id=id)
+    props <- list(id=id, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ mapView <- function(id=NULL) {
         props = props,
         type = 'MapView',
         namespace = 'dash_arcgis_open',
-        propNames = c('id'),
+        propNames = c('id', 'style'),
         package = 'dashArcgisOpen'
         )
 

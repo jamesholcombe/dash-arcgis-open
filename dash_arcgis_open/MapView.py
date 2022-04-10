@@ -10,14 +10,16 @@ class MapView(Component):
 Keyword arguments:
 
 - id (string; optional):
-    The ID used to identify this component in Dash callbacks."""
+    The ID used to identify this component in Dash callbacks.
+
+- style (dict; optional)"""
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id']
+    def __init__(self, id=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'style']
         self._type = 'MapView'
         self._namespace = 'dash_arcgis_open'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id']
+        self.available_properties = ['id', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
