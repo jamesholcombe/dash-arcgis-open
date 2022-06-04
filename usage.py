@@ -12,12 +12,16 @@ app = dash.Dash(__name__, external_stylesheets=SHEETS)
 
 app.layout = html.Div([
 
+    html.H1("Dash ArcGIS Open"),
+    html.Div(id = "output-1"),
+    dcc.Input(id = "input-1", value = "", type = "text"),
+
 
 html.Div([
     MapView(
        
         'main-map',
-        style = {'width': '300px', 'height': '300px', 'backgroundColor': 'black'},
+        style = {'width': '900px', 'height': '900px'},
         
     ),
    
@@ -27,7 +31,7 @@ html.Div([
 ])
 
 
-@app.callback(Output('output', 'children'), [Input('input-1', 'value')], [State('main-map', 'id')])
+@app.callback(Output('output-1', 'children'), [Input('input-1', 'value')], [State('main-map', 'id')])
 def display_output(value, map_id):
     return 'You have entered {}'.format(value)
 

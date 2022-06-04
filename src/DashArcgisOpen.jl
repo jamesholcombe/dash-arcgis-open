@@ -5,7 +5,6 @@ using Dash
 const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
 const version = "0.0.1"
 
-include("jl/dasharcgisopen.jl")
 include("jl/mapview.jl")
 
 function __init__()
