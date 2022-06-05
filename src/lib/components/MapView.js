@@ -7,16 +7,13 @@ import {MapViewController} from './MapViewController';
 // this is ESRIs MapView component
 // I am using it as a base
 function __MapView({id, style, center, zoom, basemap}) {
-
     const [currentMapView, setCurrentMapView] = useState(null);
-    
+
     // const [mapCenter, setCenter] = useState(center);
     const mapContainer = useRef(null);
-    
-    
-    console.log("MapView rendering");
-    console.log("center is: ", center);
-   
+
+    console.log('MapView rendering');
+    console.log('center is: ', center);
 
     // use a side effect to create the map after react has rendered the DOM
     useEffect(
@@ -61,7 +58,11 @@ function __MapView({id, style, center, zoom, basemap}) {
 
     return (
         <div style={style}>
-            <MapViewController view={currentMapView} center = {center} zoom = {zoom}/>
+            <MapViewController
+                view={currentMapView}
+                center={center}
+                zoom={zoom}
+            />
             <div
                 id={id}
                 style={{
