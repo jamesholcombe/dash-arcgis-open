@@ -1,6 +1,8 @@
-import React, {Component, useRef, useEffect} from 'react';
+import React, {Component, useRef, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {loadModules} from 'esri-loader';
+import {eventProps} from './Base';
+import { MapViewController } from './MapViewController';
 
 
 // this is ESRIs MapView component
@@ -8,7 +10,14 @@ import {loadModules} from 'esri-loader';
 function __MapView({id, style, center, zoom, basemap}) {
 
 
-    const mapRef = useRef(null);
+    const [currentMapView, setCurrentMapView] = useState(null);
+
+    const [mapCenter, setCenter] = useState(center);
+    const mapContainer = useRef(null);
+
+   
+    
+    
 
     // use a side effect to create the map after react has rendered the DOM
     useEffect(
@@ -31,11 +40,15 @@ function __MapView({id, style, center, zoom, basemap}) {
                 view = new MapView({
                     map: map,
                     // use the ref as a container
-                    container: mapRef.current,
+                    container: mapContainer.current,
                     zoom: zoom,
                     center: center,
                 });
+                setCurrentMapView(view);
+      //after map loads, connect to listen to mouse move & drag events   
             });
+            
+     
             return () => {
                 // clean up the map view
                 if (!!view) {
@@ -47,9 +60,11 @@ function __MapView({id, style, center, zoom, basemap}) {
         // only re-load the map if the id has changed
         [id]
     );
-
+    
     return (
         <div style={style}>
+            
+            <MapViewController view={currentMapView}/>
             <div
                 id={id}
                 style={{
@@ -58,7 +73,7 @@ function __MapView({id, style, center, zoom, basemap}) {
                     height: '100%',
                     width: '100%',
                 }}
-                ref={mapRef}
+                ref={mapContainer}
             />
             ;
         </div>
@@ -80,14 +95,23 @@ __MapView.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
+    id: PropTypes.string,
 
-    animation: PropTypes.object,
+    // animation: PropTypes.object,
+
+    /**
+     *basemap (a value equal to: 'topo', 'streets', 'satelite', 'hybrid', 'dark-gray', 'gray', 'national-geographic', 'oceans', 'osm', 'terrain', 'dark-gray-vector', 'gray-vector', 'streets-vector', 'streets-night-vector', 'streets-navigation-vector', 'topo-vector' or 'streets-relief-vector'; default 'gray-vector'): The basemap type. Commonly 'gray-vector',. The ID used to identify this component in Dash callbacks.
+     */
 
     basemap: PropTypes.string,
 
     //breakpoints: PropTypes.object,
 
+    /** 
+    center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).
+    */
     center: PropTypes.array,
+    
 
     //constraints : PropTypes.object,
 
@@ -99,7 +123,6 @@ __MapView.propTypes = {
 
     // highlightOptions : PropTypes.object,
 
-    id: PropTypes.string,
 
     // oauthCreds: PropTypes.object,
 

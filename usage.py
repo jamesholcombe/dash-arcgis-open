@@ -14,7 +14,8 @@ app.layout = html.Div([
 
     html.H1("Dash ArcGIS Open"),
     html.Div(id = "output-1"),
-    dcc.Input(id = "input-1", value = "", type = "text"),
+    dcc.Input(id = "input-x", value = 0, ),
+    dcc.Input(id = "input-y", value = 0,),
 
 
 html.Div([
@@ -33,9 +34,10 @@ html.Div([
 ])
 
 
-@app.callback(Output('output-1', 'children'), [Input('input-1', 'value')], [State('main-map', 'id')])
-def display_output(value, map_id):
-    return 'You have entered {}'.format(value)
+@app.callback(Output('main-map', 'center'), [Input('input-x', 'value'), Input("input-y","value")], )
+def move_center(x,y):
+
+    return [x,y]
 
 
 if __name__ == "__main__":
