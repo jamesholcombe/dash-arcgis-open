@@ -16,9 +16,8 @@
     "author": "James Holcombe  <jholcombe@hotmail.co.uk>",
     "license": "MIT",
     "dependencies": {
-        "@esri/react-arcgis": "^5.1.0",
-        "esri-loader": "^3.5.0",
-        "ramda": "^0.26.1"
+        "@arcgis/core": "^4.23.7",
+        "esri-loader": "^3.5.0"
     },
     "devDependencies": {
         "@babel/core": "^7.5.4",

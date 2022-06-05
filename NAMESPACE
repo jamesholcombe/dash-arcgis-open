@@ -3,3 +3,4 @@
 export(MapView)
 export(dashArcgisOpen)
 export(mapView)
+export(mapViewBase)

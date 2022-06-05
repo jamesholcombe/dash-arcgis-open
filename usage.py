@@ -20,8 +20,10 @@ app.layout = html.Div([
 html.Div([
     MapView(
        
-        'main-map',
+        id = 'main-map',
         style = {'width': '900px', 'height': '900px'},
+        # center = [ 0.13, 51.51 ],
+        # zoom = 10,
         
     ),
    
