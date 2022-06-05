@@ -1,7 +1,1 @@
-
-export const eventProps = [
-    "click",
-    "drag",
-    
-
-]
+export const eventProps = ['click', 'drag'];

@@ -2,22 +2,15 @@ import React, {Component, useRef, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {loadModules} from 'esri-loader';
 import {eventProps} from './Base';
-import { MapViewController } from './MapViewController';
-
+import {MapViewController} from './MapViewController';
 
 // this is ESRIs MapView component
 // I am using it as a base
 function __MapView({id, style, center, zoom, basemap}) {
-
-
     const [currentMapView, setCurrentMapView] = useState(null);
 
     const [mapCenter, setCenter] = useState(center);
     const mapContainer = useRef(null);
-
-   
-    
-    
 
     // use a side effect to create the map after react has rendered the DOM
     useEffect(
@@ -45,10 +38,9 @@ function __MapView({id, style, center, zoom, basemap}) {
                     center: center,
                 });
                 setCurrentMapView(view);
-      //after map loads, connect to listen to mouse move & drag events   
+                //after map loads, connect to listen to mouse move & drag events
             });
-            
-     
+
             return () => {
                 // clean up the map view
                 if (!!view) {
@@ -60,11 +52,10 @@ function __MapView({id, style, center, zoom, basemap}) {
         // only re-load the map if the id has changed
         [id]
     );
-    
+
     return (
         <div style={style}>
-            
-            <MapViewController view={currentMapView}/>
+            <MapViewController view={currentMapView} />
             <div
                 id={id}
                 style={{
@@ -86,9 +77,9 @@ function __MapView({id, style, center, zoom, basemap}) {
  */
 
 __MapView.defaultProps = {
-     center: [ 0.13, 51.51 ],
-        zoom:10,
-        basemap: 'streets-navigation-vector',
+    center: [0.13, 51.51],
+    zoom: 10,
+    basemap: 'streets-navigation-vector',
 };
 
 __MapView.propTypes = {
@@ -111,7 +102,6 @@ __MapView.propTypes = {
     center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).
     */
     center: PropTypes.array,
-    
 
     //constraints : PropTypes.object,
 
@@ -122,7 +112,6 @@ __MapView.propTypes = {
     // heightBreakpoints : PropTypes.string,
 
     // highlightOptions : PropTypes.object,
-
 
     // oauthCreds: PropTypes.object,
 

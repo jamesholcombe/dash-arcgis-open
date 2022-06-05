@@ -1,4 +1,4 @@
-import { eventProps } from "./Base";
+import {eventProps} from './Base';
 
 export const MapViewController = ({view}) => {
     if (view === null) {
@@ -6,14 +6,11 @@ export const MapViewController = ({view}) => {
     }
 
     view.on(eventProps, function (evt) {
-        console.log("clicked")
-       console.log(view.center);
-      });
+        console.log('clicked');
+        console.log(view.center);
+    });
 
-
-
-    console.log("map should have rendered")
+    console.log('map should have rendered');
     console.log(view.center);
     return null;
-
-}
+};
