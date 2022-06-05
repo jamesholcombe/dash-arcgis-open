@@ -6,14 +6,22 @@ import {MapViewController} from './MapViewController';
 
 // this is ESRIs MapView component
 // I am using it as a base
-function __MapView({id, style, center, zoom, basemap}) {
+function __MapView({
+    id,
+    style,
+    center,
+    zoom,
+    basemap,
+    setProps,
+    extent,
+    breakpoints,
+    constraints,
+    widthBreakpoint,
+    heightBreakpoint,
+}) {
     const [currentMapView, setCurrentMapView] = useState(null);
-
     // const [mapCenter, setCenter] = useState(center);
     const mapContainer = useRef(null);
-
-    console.log('MapView rendering');
-    console.log('center is: ', center);
 
     // use a side effect to create the map after react has rendered the DOM
     useEffect(
@@ -62,6 +70,12 @@ function __MapView({id, style, center, zoom, basemap}) {
                 view={currentMapView}
                 center={center}
                 zoom={zoom}
+                setProps={setProps}
+                breakpoints={breakpoints}
+                extent={extent}
+                constraints={constraints}
+                widthBreakpoint={widthBreakpoint}
+                heightBreakpoint={heightBreakpoint}
             />
             <div
                 id={id}
@@ -84,9 +98,23 @@ function __MapView({id, style, center, zoom, basemap}) {
  */
 
 __MapView.defaultProps = {
-    // center: [0.13, 51.51],
-    // zoom: 10,
+    center: [0.13, 51.51],
+    zoom: 10,
     basemap: 'streets-navigation-vector',
+    breakpoints: {
+        xsmall: 544,
+        small: 768,
+        medium: 992,
+        large: 1200,
+        xlarge: 1600,
+    },
+    resizeAlign: 'center',
+    constraints: null,
+    type: null,
+    extent: null,
+    widthBreakpoint: null,
+    heightBreakpoint: null,
+    highlightOptions: null,
 };
 
 __MapView.propTypes = {
@@ -95,50 +123,83 @@ __MapView.propTypes = {
      */
     id: PropTypes.string,
 
-    // animation: PropTypes.object,
-
     /**
      *basemap (a value equal to: 'topo', 'streets', 'satelite', 'hybrid', 'dark-gray', 'gray', 'national-geographic', 'oceans', 'osm', 'terrain', 'dark-gray-vector', 'gray-vector', 'streets-vector', 'streets-night-vector', 'streets-navigation-vector', 'topo-vector' or 'streets-relief-vector'; default 'gray-vector'): The basemap type. Commonly 'gray-vector',. The ID used to identify this component in Dash callbacks.
      */
-
     basemap: PropTypes.string,
 
-    //breakpoints: PropTypes.object,
+    /**
+     breakpoints (dict): The breakpoints for the view. Simple implementation of the below.
+    https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints
+    */
+    breakpoints: PropTypes.object,
 
     /** 
     center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).
     */
     center: PropTypes.array,
 
-    //constraints : PropTypes.object,
+    /**
+     Basic implementation of the below.
+     https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints
+     */
+    constraints: PropTypes.object,
 
-    //currCords : PropTypes.array,
+    /**
+     * extent (dict): dictionary of the form {xmin, ymin, xmax, ymax} that represents the extent of the map.
+     * Spatial reference is assumed to be the same as the map view's spatial reference.
+     * When extent is directly set, zoom and center will be overridden.
+     * Based on https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#extent
+     */
+    extent: PropTypes.object,
 
-    //extent : PropTypes.object,
+    /**
+     * heightBreakpoint (string) : Possible Values:"xsmall"|"small"|"medium"|"large"|"xlarge"
+     */
+    heightBreakpoint: PropTypes.string,
 
-    // heightBreakpoints : PropTypes.string,
+    /**
+     * highlightOptions (dict): Basic implementation of the below.
+     * https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#highlightOptions
+     */
+    highlightOptions: PropTypes.object,
 
-    // highlightOptions : PropTypes.object,
+    /** orientation (string): Either 'landscape' or 'portrait'.
+     * READONLY: implementation of the below.
+     * https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#loaded
+     */
+    orientation: PropTypes.string,
 
-    // oauthCreds: PropTypes.object,
-
-    // orientation: PropTypes.string,
-
-    // resizeAlign: PropTypes.string,
-
-    // resolution: PropTypes.number,
-
-    // scale: PropTypes.number,
+    /** resizeAlign (string): implementation of https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#resizeAlign
+     * Defines which anchor stays still while resizing the browser window. The default, center, ensures the view's center point remains constantly visible as the window size changes. The other options allow the respective portion of the view to remain visible when the window's size is changed.Possible Values:"center"|"left"|"right"|"top"|"bottom"|"top-left"|"top-right"|"bottom-left"|"bottom-right"
+     */
+    resizeAlign: PropTypes.string,
 
     style: PropTypes.object,
 
-    type: PropTypes.object,
+    // viewPoint: PropTypes.object,
 
-    viewPoint: PropTypes.object,
-
+    /**
+     * widthBreakpoint (string) : Possible Values:"xsmall"|"small"|"medium"|"large"|"xlarge"
+     */
     widthBreakpoint: PropTypes.string,
 
+    /**
+     * zoom (number; default 10): Represents the view's zoom level. Setting manually will override the extent.
+     */
     zoom: PropTypes.number,
+
+    //TODO
+    // animation: PropTypes.object,
+
+    //TODO
+    // oauthCreds: PropTypes.object,
+
+    //TODO
+    // resolution: PropTypes.number,
+
+    //TODO
+    // scale: PropTypes.number,
 };
 
 export {__MapView as MapView};
