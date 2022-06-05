@@ -1,16 +1,29 @@
+import { useCallback, useEffect } from 'react';
 import {eventProps} from './Base';
 
-export const MapViewController = ({view}) => {
+export const MapViewController = ({view,center,zoom}) => {
     if (view === null) {
         return null;
     }
+    
 
-    view.on(eventProps, function (evt) {
-        console.log('clicked');
-        console.log(view.center);
-    });
+    console.log('map controller rendering');
+    // view.on(eventProps, function (evt) {
+        
+    // });
 
-    console.log('map should have rendered');
+    
+    
+    useEffect( () => {
+        view.goTo({center,zoom});
+    }, [center, zoom])
+
+    
+
+    
+
+
+
     console.log(view.center);
     return null;
 };

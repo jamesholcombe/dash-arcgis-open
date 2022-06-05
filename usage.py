@@ -14,8 +14,9 @@ app.layout = html.Div([
 
     html.H1("Dash ArcGIS Open"),
     html.Div(id = "output-1"),
-    dcc.Input(id = "input-x", value = 0, ),
-    dcc.Input(id = "input-y", value = 0,),
+    dcc.Input(id = "input-x", value = 0, type = "number"),
+    dcc.Input(id = "input-y", value = 0, type = "number"),
+    html.Button(id = "button", children = "Submit"),
 
 
 html.Div([
@@ -23,8 +24,8 @@ html.Div([
        
         id = 'main-map',
         style = {'width': '900px', 'height': '900px'},
-        # center = [ 0.13, 51.51 ],
-        # zoom = 10,
+        center = [ 0.13, 51.51 ],
+        zoom = 10,
         
     ),
    
@@ -34,8 +35,13 @@ html.Div([
 ])
 
 
-@app.callback(Output('main-map', 'center'), [Input('input-x', 'value'), Input("input-y","value")], )
-def move_center(x,y):
+@app.callback(Output('main-map', 'center'),
+                Input('button', 'n_clicks'),
+ State('input-x', 'value'), 
+ State("input-y","value"), )
+def move_center(clicks,x,y):
+    print("updating center")
+    print(x,y)
 
     return [x,y]
 
