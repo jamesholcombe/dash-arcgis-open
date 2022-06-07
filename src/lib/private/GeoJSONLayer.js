@@ -8,8 +8,11 @@ function renderGeoJSONLayer(map, props) {
         css: true,
     })
         .then(([Layer]) => {
+            
+            
+            console.log("props", props);
             const myLayer = new Layer({
-                url: props.url,
+                ...props
             });
 
             console.log('myLayer', myLayer);

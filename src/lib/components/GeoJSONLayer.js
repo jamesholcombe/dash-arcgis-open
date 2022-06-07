@@ -1,4 +1,4 @@
-function __GeoJSONLayer({id, url}) {
+function __GeoJSONLayer({id, url, }) {
     return <> </>;
 }
 
@@ -12,89 +12,89 @@ __GeoJSONLayer.propTypes = {
 
     url: PropTypes.string,
 
-    blendMode: PropTypes.string,
+    // blendMode: PropTypes.string,
 
-    capabilities: PropTypes.object,
+    // capabilities: PropTypes.object,
 
-    copyright: PropTypes.string,
+    // copyright: PropTypes.string,
 
-    declaredClass: PropTypes.string,
+    // declaredClass: PropTypes.string,
 
-    definitionExpression: PropTypes.string,
+    // definitionExpression: PropTypes.string,
 
-    displayField: PropTypes.string,
+    // displayField: PropTypes.string,
 
-    effect: PropTypes.object,
+    // effect: PropTypes.object,
 
-    elevationInfo: PropTypes.object,
+    // elevationInfo: PropTypes.object,
 
-    featureReduction: PropTypes.object,
+    // featureReduction: PropTypes.object,
 
-    fields: PropTypes.arrayOf(PropTypes.object),
+    // fields: PropTypes.arrayOf(PropTypes.object),
 
-    fieldsIndex: PropTypes.object,
+    // fieldsIndex: PropTypes.object,
 
-    fullExtent: PropTypes.object,
+    // fullExtent: PropTypes.object,
 
-    geometryType: PropTypes.string,
+    // geometryType: PropTypes.string,
 
-    hasZ: PropTypes.bool,
+    // hasZ: PropTypes.bool,
 
-    labelingInfo: PropTypes.arrayOf(PropTypes.object),
+    // labelingInfo: PropTypes.arrayOf(PropTypes.object),
 
-    labelsVisible: PropTypes.bool,
+    // labelsVisible: PropTypes.bool,
 
-    legendEnabled: PropTypes.bool,
+    // legendEnabled: PropTypes.bool,
 
-    listMode: PropTypes.string,
+    // listMode: PropTypes.string,
 
-    loaded: PropTypes.bool,
+    // loaded: PropTypes.bool,
 
-    loadError: PropTypes.object,
+    // loadError: PropTypes.object,
 
-    loadStatus: PropTypes.string,
+    // loadStatus: PropTypes.string,
 
-    loadWarnings: PropTypes.arrayOf(PropTypes.object),
+    // loadWarnings: PropTypes.arrayOf(PropTypes.object),
 
-    maxScale: PropTypes.number,
+    // maxScale: PropTypes.number,
 
-    minScale: PropTypes.number,
+    // minScale: PropTypes.number,
 
-    objectIdField: PropTypes.string,
+    // objectIdField: PropTypes.string,
 
-    opacity: PropTypes.number,
+    // opacity: PropTypes.number,
 
-    orderBy: PropTypes.arrayOf(PropTypes.object),
+    // orderBy: PropTypes.arrayOf(PropTypes.object),
 
-    outFields: PropTypes.arrayOf(PropTypes.string),
+    // outFields: PropTypes.arrayOf(PropTypes.string),
 
-    popupEnabled: PropTypes.bool,
+    // popupEnabled: PropTypes.bool,
 
-    popupTemplate: PropTypes.object,
+    // popupTemplate: PropTypes.object,
 
-    renderer: PropTypes.object,
+    // renderer: PropTypes.object,
 
-    screenSizePerspectiveEnabled: PropTypes.bool,
+    // screenSizePerspectiveEnabled: PropTypes.bool,
 
-    spatialReference: PropTypes.object,
+    // spatialReference: PropTypes.object,
 
-    templates: PropTypes.arrayOf(PropTypes.object),
+    // templates: PropTypes.arrayOf(PropTypes.object),
 
-    timeExtent: PropTypes.object,
+    // timeExtent: PropTypes.object,
 
-    timeInfo: PropTypes.object,
+    // timeInfo: PropTypes.object,
 
-    timeOffset: PropTypes.number,
+    // timeOffset: PropTypes.number,
 
-    title: PropTypes.string,
+    // title: PropTypes.string,
 
-    type: PropTypes.string,
+    // type: PropTypes.string,
 
-    url: PropTypes.string,
+    // url: PropTypes.string,
 
-    useViewTime: PropTypes.bool,
+    // useViewTime: PropTypes.bool,
 
-    visible: PropTypes.bool,
+    // visible: PropTypes.bool,
 };
 
 export {__GeoJSONLayer as GeoJSONLayer};

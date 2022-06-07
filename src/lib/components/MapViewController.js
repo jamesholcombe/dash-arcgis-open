@@ -29,11 +29,15 @@ export const MapViewController = ({
 
     // setting props if they are not null, which is the default as we let ArcGIS derive them on initial load
     // if null then we set the dash props to match the ArcGIS props
-    if (constraints !== null) {
-        view.constraints = constraints;
-    } else {
-        setProps({constraints: view.constraints});
-    }
+    
+    
+    //constraits is not working
+    
+    // if (constraints !== null) {
+    //     view.constraints = constraints;
+    // } else {
+    //     setProps({constraints: view.constraints});
+    // }
 
     if (breakpoints !== null) {
         view.breakpoints = breakpoints;
