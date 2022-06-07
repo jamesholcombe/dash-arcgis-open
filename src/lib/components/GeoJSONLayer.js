@@ -1,14 +1,8 @@
-
-
-
-function __GeoJSONLayer ({id,url}) {
-    return <> </>
+function __GeoJSONLayer({id, url}) {
+    return <> </>;
 }
 
-__GeoJSONLayer.defaultProps = {
-    
-   
-};
+__GeoJSONLayer.defaultProps = {};
 
 __GeoJSONLayer.propTypes = {
     /**
@@ -16,24 +10,7 @@ __GeoJSONLayer.propTypes = {
      */
     id: PropTypes.string,
 
-    url : PropTypes.string,
-
-   
-
-
-
+    url: PropTypes.string,
 };
 
-
-
-
-
-export { __GeoJSONLayer as GeoJSONLayer};
-
-
-
-
-
-
-
-
+export {__GeoJSONLayer as GeoJSONLayer};

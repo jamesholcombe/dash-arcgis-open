@@ -1,13 +1,9 @@
 import {useCallback, useEffect} from 'react';
-import { parseChildrenToArray, renderLayer } from '../private/utils';
-
-
+import {parseChildrenToArray, renderLayer} from '../private/utils';
 
 //TODO
 //only pass down the relevant children data, or create state.
 // at the moment it rerenders as children is constantly changing, I think.
-
-
 
 export const MapViewController = ({
     id,
@@ -21,8 +17,7 @@ export const MapViewController = ({
     constraints,
     widthBreakpoint,
     heightBreakpoint,
-    children
-    
+    children,
 }) => {
     if (view === null) {
         return null;
@@ -68,17 +63,14 @@ export const MapViewController = ({
         setProps({center: view.center});
     }, [extent]);
 
-
     //use effect for each layer
     //at the moment every layer is rerendered, but we should only rerender the layers that have changed
-    console.log("children", children);
-    children.map(child => {
+    console.log('children', children);
+    children.map((child) => {
         useEffect(() => {
             renderLayer(map, child);
         }, [children]);
     });
-    
-    
- 
+
     return null;
 };

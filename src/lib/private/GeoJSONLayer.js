@@ -1,28 +1,22 @@
-import { loadModules } from "esri-loader";
+import {loadModules} from 'esri-loader';
 
+function renderGeoJSONLayer(map, props) {
+    console.log('it is rendering a GeoJSONLayer');
 
-function renderGeoJSONLayer(map, props){
-    
-    console.log("it is rendering a GeoJSONLayer");
-    
-    console.log("rendering GeoJSONLayer");
-    loadModules(['esri/layers/GeoJSONLayer', ], {
+    console.log('rendering GeoJSONLayer');
+    loadModules(['esri/layers/GeoJSONLayer'], {
         css: true,
-    }).then(([ Layer]) => {
-        
+    })
+        .then(([Layer]) => {
+            const myLayer = new Layer({
+                url: props.url,
+            });
 
+            console.log('myLayer', myLayer);
 
-        const myLayer = new Layer({
-            url: props.url
-        });
-
-        console.log("myLayer", myLayer);
-        
-        map.add(myLayer);
-        
-        
-    }).catch((err) => console.error(err));
-       
+            map.add(myLayer);
+        })
+        .catch((err) => console.error(err));
 }
 
-export {renderGeoJSONLayer}
+export {renderGeoJSONLayer};
