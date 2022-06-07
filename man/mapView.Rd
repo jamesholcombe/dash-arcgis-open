@@ -18,14 +18,14 @@ widthBreakpoint=NULL, zoom=NULL)
 }
 
 \arguments{
-\item{children}{List of a list of or a singular dash component, string or numbers | a list of or a singular dash component, string or number. }
+\item{children}{List of a list of or a singular dash component, string or numbers | a list of or a singular dash component, string or number. Children of the map view, these are normally layers.}
 
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
 \item{basemap}{Character. basemap (a value equal to: 'topo', 'streets', 'satelite', 'hybrid', 'dark-gray', 'gray', 'national-geographic', 'oceans', 'osm', 'terrain', 'dark-gray-vector', 'gray-vector', 'streets-vector', 'streets-night-vector', 'streets-navigation-vector', 'topo-vector' or 'streets-relief-vector'; default 'gray-vector'): The basemap type. Commonly 'gray-vector',. The ID used to identify this component in Dash callbacks.}
 
 \item{breakpoints}{Named list. breakpoints (dict): The breakpoints for the view. Simple implementation of the below.
-    https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints}
+     https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints}
 
 \item{center}{Unnamed list. center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).}
 

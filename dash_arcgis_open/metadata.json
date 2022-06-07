@@ -27,6 +27,24 @@
     "displayName": "__MapView",
     "methods": [],
     "props": {
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Children of the map view, these are normally layers."
+      },
       "id": {
         "type": {
           "name": "string"
@@ -50,7 +68,7 @@
           "name": "object"
         },
         "required": false,
-        "description": "breakpoints (dict): The breakpoints for the view. Simple implementation of the below.\n    https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints",
+        "description": "breakpoints (dict): The breakpoints for the view. Simple implementation of the below.\n     https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints",
         "defaultValue": {
           "value": "{\n    xsmall: 544,\n    small: 768,\n    medium: 992,\n    large: 1200,\n    xlarge: 1600,\n}",
           "computed": false
@@ -66,24 +84,6 @@
           "value": "[0.13, 51.51]",
           "computed": false
         }
-      },
-      "children": {
-        "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "arrayOf",
-              "value": {
-                "name": "node"
-              }
-            },
-            {
-              "name": "node"
-            }
-          ]
-        },
-        "required": false,
-        "description": ""
       },
       "constraints": {
         "type": {

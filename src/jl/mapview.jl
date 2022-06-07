@@ -11,11 +11,11 @@ export mapview
 A MapView component.
 
 Keyword arguments:
-- `children` (Array of a list of or a singular dash component, string or numbers | a list of or a singular dash component, string or number; optional)
+- `children` (Array of a list of or a singular dash component, string or numbers | a list of or a singular dash component, string or number; optional): Children of the map view, these are normally layers.
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `basemap` (String; optional): basemap (a value equal to: 'topo', 'streets', 'satelite', 'hybrid', 'dark-gray', 'gray', 'national-geographic', 'oceans', 'osm', 'terrain', 'dark-gray-vector', 'gray-vector', 'streets-vector', 'streets-night-vector', 'streets-navigation-vector', 'topo-vector' or 'streets-relief-vector'; default 'gray-vector'): The basemap type. Commonly 'gray-vector',. The ID used to identify this component in Dash callbacks.
 - `breakpoints` (Dict; optional): breakpoints (dict): The breakpoints for the view. Simple implementation of the below.
-    https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints
+     https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints
 - `center` (Array; optional): center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).
 - `constraints` (Dict; optional): Basic implementation of the below.
      https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints
