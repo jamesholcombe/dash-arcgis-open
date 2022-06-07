@@ -36,7 +36,7 @@ function __MapView({
     
 
     
-    // console.log("myChildren",myChildren);
+ 
 
     // use a side effect to create the map after react has rendered the DOM
     useEffect(
@@ -80,8 +80,7 @@ function __MapView({
         [id]
     );
 
-    
-    
+
     return (
         <div style={style}>
             <MapViewController
@@ -136,31 +135,37 @@ __MapView.defaultProps = {
 };
 
 __MapView.propTypes = {
+    
+    /**
+     * Children of the map view, these are normally layers.
+     */
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
+    
+    
     /**
      * The ID used to identify this component in Dash callbacks.
      */
     id: PropTypes.string,
-
+    
     /**
      *basemap (a value equal to: 'topo', 'streets', 'satelite', 'hybrid', 'dark-gray', 'gray', 'national-geographic', 'oceans', 'osm', 'terrain', 'dark-gray-vector', 'gray-vector', 'streets-vector', 'streets-night-vector', 'streets-navigation-vector', 'topo-vector' or 'streets-relief-vector'; default 'gray-vector'): The basemap type. Commonly 'gray-vector',. The ID used to identify this component in Dash callbacks.
      */
     basemap: PropTypes.string,
-
+    
     /**
      breakpoints (dict): The breakpoints for the view. Simple implementation of the below.
-    https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints
-    */
+     https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints
+     */
     breakpoints: PropTypes.object,
-
+    
     /** 
     center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).
     */
     center: PropTypes.array,
 
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node,
-    ]),
 
    
 
