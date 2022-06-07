@@ -1,11 +1,14 @@
 import React, {Component, useRef, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {loadModules} from 'esri-loader';
-import {eventProps} from './Base';
 import {MapViewController} from './MapViewController';
+import {parseChildrenToArray, renderLayer,resolveChildProps   } from '../private/utils';
 
 
-function View({
+
+
+
+function __MapView({
     id,
     style,
     center,
@@ -17,9 +20,23 @@ function View({
     constraints,
     widthBreakpoint,
     heightBreakpoint,
+    children
 }) {
-    const [currentMapView, setCurrentMapView] = useState(null);
+    const [mapView, setMapView] = useState(null);
+    const [map,setMap ] = useState(null);
     const mapContainer = useRef(null);
+    children =  parseChildrenToArray(children)
+    const childrenProps = children.map(child => resolveChildProps(child));
+
+
+    
+
+    
+
+    
+
+    
+    // console.log("myChildren",myChildren);
 
     // use a side effect to create the map after react has rendered the DOM
     useEffect(
@@ -30,7 +47,7 @@ function View({
             // the following code is based on this sample:
             // https://developers.arcgis.com/javascript/latest/sample-code/webmap-basic/index.html
             // first lazy-load the esri classes
-            loadModules(['esri/views/MapView', 'esri/WebMap'], {
+            loadModules(['esri/views/MapView', 'esri/Map'], {
                 css: true,
             }).then(([MapView, Map]) => {
                 // then we load a web map from an id
@@ -46,7 +63,8 @@ function View({
                     zoom: zoom,
                     center: center,
                 });
-                setCurrentMapView(view);
+                setMapView(view);
+                setMap(map);
                 //after map loads, connect to listen to mouse move & drag events
             });
 
@@ -62,10 +80,13 @@ function View({
         [id]
     );
 
+    
+    
     return (
         <div style={style}>
             <MapViewController
-                view={currentMapView}
+                map={map}
+                view={mapView}
                 center={center}
                 zoom={zoom}
                 setProps={setProps}
@@ -74,6 +95,8 @@ function View({
                 constraints={constraints}
                 widthBreakpoint={widthBreakpoint}
                 heightBreakpoint={heightBreakpoint}
+                children={childrenProps}
+                
             />
             <div
                 id={id}
@@ -103,12 +126,13 @@ __MapView.defaultProps = {
         xlarge: 1600,
     },
     resizeAlign: 'center',
-    constraints: null,
-    type: null,
-    extent: null,
-    widthBreakpoint: null,
-    heightBreakpoint: null,
-    highlightOptions: null,
+    // constraints: ,
+    // type: null,
+    // extent: null,
+    // widthBreakpoint: null,
+    // heightBreakpoint: null,
+    // highlightOptions: null,
+    // children : [],
 };
 
 __MapView.propTypes = {
@@ -132,6 +156,13 @@ __MapView.propTypes = {
     center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).
     */
     center: PropTypes.array,
+
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
+
+   
 
     /**
      Basic implementation of the below.
@@ -171,7 +202,7 @@ __MapView.propTypes = {
 
     style: PropTypes.object,
 
-    // viewPoint: PropTypes.object,
+   
 
     /**
      * widthBreakpoint (string) : Possible Values:"xsmall"|"small"|"medium"|"large"|"xlarge"
@@ -183,17 +214,6 @@ __MapView.propTypes = {
      */
     zoom: PropTypes.number,
 
-    //TODO
-    // animation: PropTypes.object,
-
-    //TODO
-    // oauthCreds: PropTypes.object,
-
-    //TODO
-    // resolution: PropTypes.number,
-
-    //TODO
-    // scale: PropTypes.number,
 };
 
 export {__MapView as MapView};

@@ -1,12 +1,35 @@
 {
+  "src/lib/components/GeoJSONLayer.js": {
+    "description": "",
+    "displayName": "__GeoJSONLayer",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "url": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
   "src/lib/components/MapView.js": {
     "description": "",
     "displayName": "__MapView",
     "methods": [],
     "props": {
-      "animation": {
+      "id": {
         "type": {
-          "name": "object"
+          "name": "string"
         },
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
@@ -16,37 +39,99 @@
           "name": "string"
         },
         "required": false,
-        "description": ""
+        "description": "basemap (a value equal to: 'topo', 'streets', 'satelite', 'hybrid', 'dark-gray', 'gray', 'national-geographic', 'oceans', 'osm', 'terrain', 'dark-gray-vector', 'gray-vector', 'streets-vector', 'streets-night-vector', 'streets-navigation-vector', 'topo-vector' or 'streets-relief-vector'; default 'gray-vector'): The basemap type. Commonly 'gray-vector',. The ID used to identify this component in Dash callbacks.",
+        "defaultValue": {
+          "value": "'streets-navigation-vector'",
+          "computed": false
+        }
+      },
+      "breakpoints": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "breakpoints (dict): The breakpoints for the view. Simple implementation of the below.\n    https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints",
+        "defaultValue": {
+          "value": "{\n    xsmall: 544,\n    small: 768,\n    medium: 992,\n    large: 1200,\n    xlarge: 1600,\n}",
+          "computed": false
+        }
       },
       "center": {
         "type": {
           "name": "array"
         },
         "required": false,
+        "description": "center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).",
+        "defaultValue": {
+          "value": "[0.13, 51.51]",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
         "description": ""
       },
-      "id": {
+      "constraints": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Basic implementation of the below.\n     https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints"
+      },
+      "extent": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "extent (dict): dictionary of the form {xmin, ymin, xmax, ymax} that represents the extent of the map.\nSpatial reference is assumed to be the same as the map view's spatial reference.\nWhen extent is directly set, zoom and center will be overridden.\nBased on https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#extent"
+      },
+      "heightBreakpoint": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": ""
+        "description": "heightBreakpoint (string) : Possible Values:\"xsmall\"|\"small\"|\"medium\"|\"large\"|\"xlarge\""
+      },
+      "highlightOptions": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "highlightOptions (dict): Basic implementation of the below.\nhttps://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#highlightOptions"
+      },
+      "orientation": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "orientation (string): Either 'landscape' or 'portrait'.\nREADONLY: implementation of the below.\nhttps://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#loaded"
+      },
+      "resizeAlign": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "resizeAlign (string): implementation of https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#resizeAlign\nDefines which anchor stays still while resizing the browser window. The default, center, ensures the view's center point remains constantly visible as the window size changes. The other options allow the respective portion of the view to remain visible when the window's size is changed.Possible Values:\"center\"|\"left\"|\"right\"|\"top\"|\"bottom\"|\"top-left\"|\"top-right\"|\"bottom-left\"|\"bottom-right\"",
+        "defaultValue": {
+          "value": "'center'",
+          "computed": false
+        }
       },
       "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": ""
-      },
-      "type": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": ""
-      },
-      "viewPoint": {
         "type": {
           "name": "object"
         },
@@ -58,14 +143,18 @@
           "name": "string"
         },
         "required": false,
-        "description": ""
+        "description": "widthBreakpoint (string) : Possible Values:\"xsmall\"|\"small\"|\"medium\"|\"large\"|\"xlarge\""
       },
       "zoom": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": ""
+        "description": "zoom (number; default 10): Represents the view's zoom level. Setting manually will override the extent.",
+        "defaultValue": {
+          "value": "10",
+          "computed": false
+        }
       }
     }
   }
