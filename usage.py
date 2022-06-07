@@ -27,7 +27,7 @@ app.layout = html.Div(
                         GeoJSONLayer(
                             id="geojson-layer",
                             url="https://celh.blob.core.windows.net/germany/small_data.json?sp=r&st=2022-06-07T18:47:07Z&se=2022-07-09T02:47:07Z&sv=2020-08-04&sr=b&sig=5JskYj504vGm9tZAREPXxb5FdLbFhzchCm40ht1ef1E%3D",
-                            # layerType="GeoJSONLayer", 
+                             
                         )
                     ],
                     id="main-map",
