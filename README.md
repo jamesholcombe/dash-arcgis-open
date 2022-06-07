@@ -25,7 +25,7 @@ Current functionality implemented "inspired" by the dash-arcgis documentation.
 - [ ] WebScene
 
 ### Layers
-- [ ] GeoJSONLayer
+- [x] GeoJSONLayer
 - [ ] ImageryLayer
 - [ ] OGCFeatureLayer
 - [ ] VectorTileLayer
