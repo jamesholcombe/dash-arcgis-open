@@ -6,7 +6,7 @@ Open Source implementation of Plotly Dash mapping components, powered by the ESR
 
 **This library is not in any way affiliated with either ESRI or Plotly.**
 
-This is simply the result of a programmer frustrated by the decision to make Dash ArcGIS a part of the pay-to-use Dash Enterprise.
+This is simply the result of a programmer frustrated by the decision to make Dash ArcGIS a part of the pay-to-use Dash Enterprise. I am Far from a react expert so contributions are more than welcome.
 
 ## Resources 
 
