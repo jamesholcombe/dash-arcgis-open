@@ -1,7 +1,7 @@
 {
     "name": "dash_arcgis_open",
     "version": "0.0.2",
-    "description": "Project Description",
+    "description": "Open Source implementation of Plotly Dash mapping components, powered by the ESRI ArcGIS API for Javascript.",
     "main": "build/index.js",
     "scripts": {
         "start": "webpack-serve --config ./webpack.serve.config.js --open",

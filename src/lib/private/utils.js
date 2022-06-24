@@ -49,23 +49,3 @@ const resolveChildProps = (child) => {
   export {parseChildrenToArray, resolveChildProps, renderLayerOrWidget};
 
 
-
-
-
-
-function renderLayer(map, {_layerType, ...props}) {
-    console.log('rendering layer');
-    console.log('map here', map);
-
-    switch (_layerType) {
-        case 'GeoJSONLayer':
-            console.log('rendering GeoJSONLayer');
-
-            renderGeoJSONLayer(map, props);
-            break;
-        default:
-            console.log('layer type not supported');
-    }
-}
-
-export {parseChildrenToArray, resolveChildProps, renderLayer};

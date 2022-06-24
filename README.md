@@ -33,7 +33,7 @@ Current functionality implemented "inspired" by the dash-arcgis documentation.
 - [ ] WMSLayer
 
 ### Widgets
-- [ ] BasemapGallery
+- [x] BasemapGallery
 - [ ] Bookmarks
 - [ ] Home
 - [ ] LayerList
