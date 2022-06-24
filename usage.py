@@ -1,4 +1,4 @@
-from dash_arcgis_open import MapView, GeoJSONLayer, BasemapGallery, Editor
+from dash_arcgis_open import MapView, GeoJSONLayer, BasemapGallery, Editor, Bookmarks
 from dash.dependencies import Input, Output, State
 import dash_html_components as html
 import dash_core_components as dcc
@@ -27,7 +27,7 @@ app.layout = html.Div(
                             
                         ),
                         # BasemapGallery(id = "gallery", position = "top-right", visible = True)
-                        Editor(id = "editor", position = "right")
+                       Bookmarks(id = "bookmarks", position = "top-right",editingEnabled = True, visible = True)
 
                         
                     ],

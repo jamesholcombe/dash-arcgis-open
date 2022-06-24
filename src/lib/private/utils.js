@@ -1,6 +1,7 @@
 import { renderGeoJSONLayer } from "./layers/GeoJSONLayer";
 import { renderBasemapGallery } from "./widgets/BasemapGallery";
 import { renderEditor } from "./widgets/Editor";
+import { renderBookmarks } from "./widgets/Bookmarks";
 
 //copied from https://github.com/facultyai/dash-bootstrap-components/blob/main/src/private/util.js
 const parseChildrenToArray = (children) => {
@@ -42,6 +43,9 @@ const resolveChildProps = (child) => {
         break;
     case "Editor":
         renderEditor(props);
+        break;
+    case "Bookmarks":
+        renderBookmarks(props);
         break;
         
         default:
