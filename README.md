@@ -34,10 +34,14 @@ Current functionality implemented "inspired" by the dash-arcgis documentation.
 
 ### Widgets
 - [x] [BasemapGallery](https://dash.plotly.com/dash-arcgis/reference/widgets)
-- [ ] [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
+- [x] [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
+- [x] [Editor](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.editor)
+- [ ] [Expand](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.expand)
 - [ ] [Home](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.home)
 - [ ] [LayerList](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.layerlist)
 - [ ] [NavigationToggle](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.navigationtoggle)
 - [ ] [Print](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.print)
 - [ ] [ScaleBar](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.scalebar)
+- [ ] [TimeSlider](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.timeslider)
 - [ ] [Zoom](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.zoom) 
+
