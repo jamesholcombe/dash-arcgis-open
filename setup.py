@@ -15,7 +15,8 @@ setup(
     packages=[package_name],
     include_package_data=True,
     license=package['license'],
-    description=package.get('description', package_name),
+    description="Open Source implementation of Plotly Dash mapping components, powered by the ESRI ArcGIS API for Javascript.",
+    long_description="Open Source implementation of Plotly Dash mapping components, powered by the ESRI ArcGIS API for Javascript.",
     install_requires=[],
     classifiers = [
         'Framework :: Dash',

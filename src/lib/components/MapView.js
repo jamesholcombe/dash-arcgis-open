@@ -2,11 +2,11 @@ import React, {Component, useRef, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {loadModules} from 'esri-loader';
 import {MapViewController} from './MapViewController';
-import {parseChildrenToArray, renderLayer,resolveChildProps   } from '../private/utils';
-
-
-
-
+import {
+    parseChildrenToArray,
+    renderLayer,
+    resolveChildProps,
+} from '../private/utils';
 
 function __MapView({
     id,
@@ -20,23 +20,13 @@ function __MapView({
     constraints,
     widthBreakpoint,
     heightBreakpoint,
-    children
+    children,
 }) {
     const [mapView, setMapView] = useState(null);
-    const [map,setMap ] = useState(null);
+    const [map, setMap] = useState(null);
     const mapContainer = useRef(null);
-    children =  parseChildrenToArray(children)
-    const childrenProps = children.map(child => resolveChildProps(child));
-
-
-    
-
-    
-
-    
-
-    
-    // console.log("myChildren",myChildren);
+    children = parseChildrenToArray(children);
+    const childrenProps = children.map((child) => resolveChildProps(child));
 
     // use a side effect to create the map after react has rendered the DOM
     useEffect(
@@ -80,8 +70,6 @@ function __MapView({
         [id]
     );
 
-    
-    
     return (
         <div style={style}>
             <MapViewController
@@ -96,7 +84,6 @@ function __MapView({
                 widthBreakpoint={widthBreakpoint}
                 heightBreakpoint={heightBreakpoint}
                 children={childrenProps}
-                
             />
             <div
                 id={id}
@@ -112,7 +99,6 @@ function __MapView({
         </div>
     );
 }
-
 
 __MapView.defaultProps = {
     center: [0.13, 51.51],
@@ -137,6 +123,14 @@ __MapView.defaultProps = {
 
 __MapView.propTypes = {
     /**
+     * Children of the map view, these are normally layers.
+     */
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
+
+    /**
      * The ID used to identify this component in Dash callbacks.
      */
     id: PropTypes.string,
@@ -148,21 +142,14 @@ __MapView.propTypes = {
 
     /**
      breakpoints (dict): The breakpoints for the view. Simple implementation of the below.
-    https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints
-    */
+     https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#breakpoints
+     */
     breakpoints: PropTypes.object,
 
     /** 
     center (list; default [-168, 46]): Represents the view's center point; when setting the center, pass an array of numbers representing a longitude/latitude pair ([-100.4593, 36.9014]).
     */
     center: PropTypes.array,
-
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node,
-    ]),
-
-   
 
     /**
      Basic implementation of the below.
@@ -202,8 +189,6 @@ __MapView.propTypes = {
 
     style: PropTypes.object,
 
-   
-
     /**
      * widthBreakpoint (string) : Possible Values:"xsmall"|"small"|"medium"|"large"|"xlarge"
      */
@@ -213,7 +198,6 @@ __MapView.propTypes = {
      * zoom (number; default 10): Represents the view's zoom level. Setting manually will override the extent.
      */
     zoom: PropTypes.number,
-
 };
 
 export {__MapView as MapView};

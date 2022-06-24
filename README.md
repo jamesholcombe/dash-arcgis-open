@@ -1,5 +1,3 @@
-WIP
-
 # dash-arcgis-open
 
 Open Source implementation of Plotly Dash mapping components, powered by the ESRI ArcGIS API for Javascript.

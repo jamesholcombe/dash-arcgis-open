@@ -4,10 +4,7 @@ import dash_html_components as html
 import dash_core_components as dcc
 import dash
 
-import dash_arcgis_open as dago
 
-
-dago.GeoJSONLayer
 
 SHEETS = ["https://js.arcgis.com/4.23/esri/themes/light/main.css"]
 

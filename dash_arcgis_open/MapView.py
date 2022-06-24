@@ -9,7 +9,8 @@ class MapView(Component):
 
 Keyword arguments:
 
-- children (list of a list of or a singular dash component, string or numbers | a list of or a singular dash component, string or number; optional)
+- children (list of a list of or a singular dash component, string or numbers | a list of or a singular dash component, string or number; optional):
+    Children of the map view, these are normally layers.
 
 - id (string; optional):
     The ID used to identify this component in Dash callbacks.
