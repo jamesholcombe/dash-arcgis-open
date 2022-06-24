@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import { renderGeoJSONLayer } from "./GeoJSONLayer";
 import { renderBasemapGallery } from "./BasemapGallery";
-=======
-import {renderGeoJSONLayer} from './GeoJSONLayer';
->>>>>>> main
 
 //copied from https://github.com/facultyai/dash-bootstrap-components/blob/main/src/private/util.js
 const parseChildrenToArray = (children) => {
