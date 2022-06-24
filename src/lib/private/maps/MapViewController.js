@@ -1,5 +1,5 @@
 import {useCallback, useEffect} from 'react';
-import { parseChildrenToArray, renderLayer, renderLayerOrWidget } from './utils';
+import { parseChildrenToArray, renderLayer, renderLayerOrWidget } from '../utils';
 
 
 

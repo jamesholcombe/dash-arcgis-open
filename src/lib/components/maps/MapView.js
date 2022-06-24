@@ -1,7 +1,7 @@
 import React, {Component, useRef, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {loadModules} from 'esri-loader';
-import {MapViewController} from '../../private/MapViewController';
+import {MapViewController} from '../../private/maps/MapViewController';
 import {
     parseChildrenToArray,
     renderLayer,
