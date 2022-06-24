@@ -1,10 +1,10 @@
 import {loadModules} from 'esri-loader';
 
-function renderGeoJSONLayer(map, props) {
-    console.log('it is rendering a GeoJSONLayer');
 
-    console.log('rendering GeoJSONLayer');
-    loadModules(['esri/layers/GeoJSONLayer'], {
+function renderGeoJSONLayer({map, ...props}){
+    
+  
+    loadModules(['esri/layers/GeoJSONLayer', ], {
         css: true,
     })
         .then(([Layer]) => {

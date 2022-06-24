@@ -1,8 +1,11 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+export(BasemapGallery)
 export(GeoJSONLayer)
 export(MapView)
+export(baseMapGallery)
 export(dashArcgisOpen)
 export(geoJSONLayer)
+export(basemapGallery)
 export(mapView)
 export(mapViewBase)

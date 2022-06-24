@@ -1,5 +1,7 @@
 import {useCallback, useEffect} from 'react';
-import {parseChildrenToArray, renderLayer} from '../private/utils';
+import { parseChildrenToArray, renderLayer, renderLayerOrWidget } from '../private/utils';
+
+
 
 //TODO
 //only pass down the relevant children data, or create state.
@@ -68,12 +70,13 @@ export const MapViewController = ({
     }, [extent]);
 
     //use effect for each layer
-    //at the moment every layer is rerendered, but we should only rerender the layers that have changed
-    console.log('children', children);
-    children.map((child) => {
+    children.map(child => {
+        
+        child['map'] = map;
+        child['view'] = view;
         useEffect(() => {
-            renderLayer(map, child);
-        }, [children]);
+            renderLayerOrWidget(child);
+        }, [id]);
     });
 
     return null;

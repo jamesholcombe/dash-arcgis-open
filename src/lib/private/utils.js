@@ -1,4 +1,5 @@
-import {renderGeoJSONLayer} from './GeoJSONLayer';
+import { renderGeoJSONLayer } from "./GeoJSONLayer";
+import { renderBasemapGallery } from "./BasemapGallery";
 
 //copied from https://github.com/facultyai/dash-bootstrap-components/blob/main/src/private/util.js
 const parseChildrenToArray = (children) => {
@@ -16,30 +17,35 @@ const resolveChildProps = (child) => {
         child.props._dashprivate_layout &&
         child.props._dashprivate_layout.props
     ) {
-        // props are coming from Dash
-        const layerType = child.props._dashprivate_layout.type;
-        const layerProps = child.props._dashprivate_layout.props;
-        layerProps._layerType = layerType;
-        return layerProps;
+      // props are coming from Dash
+      const layerType = child.props._dashprivate_layout.type;
+      const layerProps = child.props._dashprivate_layout.props;
+      layerProps._type = layerType;
+      return layerProps;
     } else {
         // else props are coming from React (e.g. Demo.js, or Tabs.test.js)
         return child.props;
     }
-};
-
-function renderLayer(map, {_layerType, ...props}) {
-    console.log('rendering layer');
-    console.log('map here', map);
-
-    switch (_layerType) {
-        case 'GeoJSONLayer':
-            console.log('rendering GeoJSONLayer');
-
-            renderGeoJSONLayer(map, props);
-            break;
+  };
+  
+  
+  function renderLayerOrWidget(props) {
+    
+  
+    switch (props._type) {
+      case "GeoJSONLayer":
+        renderGeoJSONLayer(props);
+        break;
+    case "BasemapGallery":
+        renderBasemapGallery(props);
+        
+        
         default:
-            console.log('layer type not supported');
-    }
-}
+          console.log("layer type not supported");
+          
+        }
+      }
+      
+  export {parseChildrenToArray, resolveChildProps, renderLayerOrWidget};
 
-export {parseChildrenToArray, resolveChildProps, renderLayer};
+
