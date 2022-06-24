@@ -19,25 +19,25 @@ This is simply the result of a programmer frustrated by the decision to make Das
 Current functionality implemented "inspired" by the dash-arcgis documentation.
 
 ### Maps
-- [x] MapView 
-- [ ] SceneView 
-- [ ] Webmap
-- [ ] WebScene
+- [x] [MapView](https://dash.plotly.com/dash-arcgis/reference/maps) 
+- [ ] [SceneView](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.sceneview) 
+- [ ] [Webmap](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webmap)
+- [ ] [WebScene](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webscene)
 
 ### Layers
-- [x] GeoJSONLayer
-- [ ] ImageryLayer
-- [ ] OGCFeatureLayer
-- [ ] VectorTileLayer
-- [ ] WFSLayer
-- [ ] WMSLayer
+- [x] [GeoJSONLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.geojsonlayer)
+- [ ] [ImageryLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.imagerylayer)
+- [ ] [OGCFeatureLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.ogcfeaturelayer)
+- [ ] [VectorTileLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.vectortilelayer)
+- [ ] [WFSLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.wfslayer)
+- [ ] [WMSLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.wmslayer)
 
 ### Widgets
-- [x] BasemapGallery
-- [ ] Bookmarks
-- [ ] Home
-- [ ] LayerList
-- [ ] NavigationToggle
-- [ ] Print
-- [ ] ScaleBar
-- [ ] Zoom 
+- [x] [BasemapGallery](https://dash.plotly.com/dash-arcgis/reference/widgets)
+- [ ] [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
+- [ ] [Home](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.home)
+- [ ] [LayerList](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.layerlist)
+- [ ] [NavigationToggle](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.navigationtoggle)
+- [ ] [Print](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.print)
+- [ ] [ScaleBar](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.scalebar)
+- [ ] [Zoom](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.zoom) 
