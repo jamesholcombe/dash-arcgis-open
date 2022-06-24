@@ -1,5 +1,5 @@
 import {useCallback, useEffect} from 'react';
-import { parseChildrenToArray, renderLayer } from '../private/utils';
+import { parseChildrenToArray, renderLayer, renderLayerOrWidget } from '../private/utils';
 
 
 
@@ -79,8 +79,11 @@ export const MapViewController = ({
     
     //use effect for each layer
     children.map(child => {
+        
+        child['map'] = map;
+        child['view'] = view;
         useEffect(() => {
-            renderLayer(map, child);
+            renderLayerOrWidget(child);
         }, [id]);
     });
     

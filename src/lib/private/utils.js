@@ -1,4 +1,5 @@
 import { renderGeoJSONLayer } from "./GeoJSONLayer";
+import { renderBasemapGallery } from "./BasemapGallery";
 
 //copied from https://github.com/facultyai/dash-bootstrap-components/blob/main/src/private/util.js
 const parseChildrenToArray = children => {
@@ -19,7 +20,7 @@ const parseChildrenToArray = children => {
       // props are coming from Dash
       const layerType = child.props._dashprivate_layout.type;
       const layerProps = child.props._dashprivate_layout.props;
-      layerProps._layerType = layerType;
+      layerProps._type = layerType;
       return layerProps;
     } else {
       // else props are coming from React (e.g. Demo.js, or Tabs.test.js)
@@ -28,25 +29,24 @@ const parseChildrenToArray = children => {
   };
   
   
-  function renderLayer(map,{_layerType, ...props}) {
-    
-    console.log("rendering layer");
-    console.log("map here",map);
+  function renderLayerOrWidget(props) {
     
   
-    switch (_layerType) {
+    switch (props._type) {
       case "GeoJSONLayer":
-        console.log("rendering GeoJSONLayer");
-        
-        renderGeoJSONLayer(map, props);
+        renderGeoJSONLayer(props);
         break;
+    case "BasemapGallery":
+        renderBasemapGallery(props);
+        
+        
         default:
           console.log("layer type not supported");
           
         }
       }
       
-  export {parseChildrenToArray, resolveChildProps, renderLayer};
+  export {parseChildrenToArray, resolveChildProps, renderLayerOrWidget};
 
 
 

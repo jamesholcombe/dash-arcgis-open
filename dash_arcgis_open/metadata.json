@@ -1,4 +1,55 @@
 {
+  "src/lib/components/BasemapGallery.js": {
+    "description": "",
+    "displayName": "BasemapGallery",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "position": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "position of the basemap gallery. Defaults to top-right.",
+        "defaultValue": {
+          "value": "'top-right'",
+          "computed": false
+        }
+      },
+      "visible": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "Indicates whether the widget is visible."
+      },
+      "label": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The widget's default label."
+      },
+      "activeBaseMap": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "Read-only. The current basemap name."
+      }
+    }
+  },
   "src/lib/components/GeoJSONLayer.js": {
     "description": "",
     "displayName": "__GeoJSONLayer",

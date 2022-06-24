@@ -1,4 +1,4 @@
-from dash_arcgis_open import MapView, GeoJSONLayer
+from dash_arcgis_open import MapView, GeoJSONLayer, BasemapGallery
 from dash.dependencies import Input, Output, State
 import dash_html_components as html
 import dash_core_components as dcc
@@ -26,9 +26,10 @@ app.layout = html.Div(
                     children=[
                         GeoJSONLayer(
                             id="geojson-layer",
-                            url="https://celh.blob.core.windows.net/germany/small_data.json?sp=r&st=2022-06-07T18:47:07Z&se=2022-07-09T02:47:07Z&sv=2020-08-04&sr=b&sig=5JskYj504vGm9tZAREPXxb5FdLbFhzchCm40ht1ef1E%3D",
-                            # layerType="GeoJSONLayer", 
-                        )
+                            url="https://raw.githubusercontent.com/martinjc/UK-GeoJSON/master/json/electoral/eng/wards_by_lad/E06000001.json",
+                            
+                        ),
+                        BasemapGallery(id = "gallery", position = "top-right", visible = True)
                     ],
                     id="main-map",
                     style={"width": "900px", "height": "900px"},
