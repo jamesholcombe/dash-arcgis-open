@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
-import {MapView} from './components/MapView';
-import {  GeoJSONLayer } from './components/GeoJSONLayer';
-import { BasemapGallery } from './components/BasemapGallery';
+import {MapView} from './components/maps/MapView';
+import {  GeoJSONLayer } from './components/layers/GeoJSONLayer';
+import { BasemapGallery } from './components/widgets/BasemapGallery';
 
 
 

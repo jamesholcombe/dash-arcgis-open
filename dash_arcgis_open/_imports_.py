@@ -1,9 +1,9 @@
-from .BasemapGallery import BasemapGallery
 from .GeoJSONLayer import GeoJSONLayer
 from .MapView import MapView
+from .BasemapGallery import BasemapGallery
 
 __all__ = [
-    "BasemapGallery",
     "GeoJSONLayer",
-    "MapView"
+    "MapView",
+    "BasemapGallery"
 ]

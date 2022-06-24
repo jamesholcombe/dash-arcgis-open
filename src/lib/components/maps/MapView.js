@@ -1,12 +1,12 @@
 import React, {Component, useRef, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {loadModules} from 'esri-loader';
-import {MapViewController} from './MapViewController';
+import {MapViewController} from '../../private/MapViewController';
 import {
     parseChildrenToArray,
     renderLayer,
     resolveChildProps,
-} from '../private/utils';
+} from '../../private/utils';
 
 function __MapView({
     id,
