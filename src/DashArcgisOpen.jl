@@ -8,6 +8,7 @@ const version = "0.0.3"
 include("jl/geojsonlayer.jl")
 include("jl/mapview.jl")
 include("jl/basemapgallery.jl")
+include("jl/editor.jl")
 
 function __init__()
     DashBase.register_package(

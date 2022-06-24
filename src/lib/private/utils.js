@@ -1,5 +1,6 @@
 import { renderGeoJSONLayer } from "./layers/GeoJSONLayer";
 import { renderBasemapGallery } from "./widgets/BasemapGallery";
+import { renderEditor } from "./widgets/Editor";
 
 //copied from https://github.com/facultyai/dash-bootstrap-components/blob/main/src/private/util.js
 const parseChildrenToArray = (children) => {
@@ -38,7 +39,10 @@ const resolveChildProps = (child) => {
         break;
     case "BasemapGallery":
         renderBasemapGallery(props);
-        
+        break;
+    case "Editor":
+        renderEditor(props);
+        break;
         
         default:
           console.log("layer type not supported");
