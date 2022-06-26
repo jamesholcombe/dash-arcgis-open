@@ -1,56 +1,5 @@
 {
-  "src/lib/components/BasemapGallery.js": {
-    "description": "",
-    "displayName": "BasemapGallery",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "custom",
-          "raw": "PropTypes.string"
-        },
-        "required": false,
-        "description": "The ID used to identify this component in Dash callbacks."
-      },
-      "position": {
-        "type": {
-          "name": "custom",
-          "raw": "PropTypes.string"
-        },
-        "required": false,
-        "description": "position of the basemap gallery. Defaults to top-right.",
-        "defaultValue": {
-          "value": "'top-right'",
-          "computed": false
-        }
-      },
-      "visible": {
-        "type": {
-          "name": "custom",
-          "raw": "PropTypes.bool"
-        },
-        "required": false,
-        "description": "Indicates whether the widget is visible."
-      },
-      "label": {
-        "type": {
-          "name": "custom",
-          "raw": "PropTypes.string"
-        },
-        "required": false,
-        "description": "The widget's default label."
-      },
-      "activeBaseMap": {
-        "type": {
-          "name": "custom",
-          "raw": "PropTypes.string"
-        },
-        "required": false,
-        "description": "Read-only. The current basemap name."
-      }
-    }
-  },
-  "src/lib/components/GeoJSONLayer.js": {
+  "src/lib/components/layers/GeoJSONLayer.js": {
     "description": "",
     "displayName": "__GeoJSONLayer",
     "methods": [],
@@ -73,7 +22,7 @@
       }
     }
   },
-  "src/lib/components/MapView.js": {
+  "src/lib/components/maps/MapView.js": {
     "description": "",
     "displayName": "__MapView",
     "methods": [],
@@ -206,6 +155,206 @@
           "value": "10",
           "computed": false
         }
+      }
+    }
+  },
+  "src/lib/components/widgets/BasemapGallery.js": {
+    "description": "",
+    "displayName": "BasemapGallery",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "position": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "position of the basemap gallery. Defaults to top-right.",
+        "defaultValue": {
+          "value": "'top-right'",
+          "computed": false
+        }
+      },
+      "visible": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "Indicates whether the widget is visible."
+      },
+      "label": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The widget's default label."
+      },
+      "activeBaseMap": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "Read-only. The current basemap name."
+      }
+    }
+  },
+  "src/lib/components/widgets/Bookmarks.js": {
+    "description": "",
+    "displayName": "Bookmarks",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "position": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "position of the basemap gallery. Defaults to top-right.\nPossible values: 'bottom-leading', 'bottom-left', 'bottom-right', 'bottom-trailing', 'top-leading', 'top-left', 'top-right', 'top-trailing'. Default: 'top-right'.",
+        "defaultValue": {
+          "value": "'top-right'",
+          "computed": false
+        }
+      },
+      "visible": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "Indicates whether the widget is visible."
+      },
+      "label": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The widget's default label."
+      },
+      "editingEnabled": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "editingEnabled (boolean; optional): Indicates whether the bookmarks are able to be edited.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/lib/components/widgets/Editor.js": {
+    "description": "",
+    "displayName": "Editor",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "position": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "position of the basemap gallery. Defaults to top-right.",
+        "defaultValue": {
+          "value": "'top-right'",
+          "computed": false
+        }
+      },
+      "visible": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "Indicates whether the widget is visible."
+      },
+      "label": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The widget's default label."
+      }
+    }
+  },
+  "src/lib/components/widgets/Expand.js": {
+    "description": "",
+    "displayName": "Expand",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "Another widget that will be rendered inside the Expand widget."
+      },
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "position": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "position of the basemap gallery. Defaults to top-right.",
+        "defaultValue": {
+          "value": "'top-right'",
+          "computed": false
+        }
+      },
+      "visible": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "Indicates whether the widget is visible."
+      },
+      "label": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The widget's default label."
       }
     }
   }

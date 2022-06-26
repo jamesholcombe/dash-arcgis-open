@@ -1,8 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import {MapView} from './components/MapView';
-import {  GeoJSONLayer } from './components/GeoJSONLayer';
-import { BasemapGallery } from './components/BasemapGallery';
+import {MapView} from './components/maps';
+import {GeoJSONLayer} from './components/layers';
+import {BasemapGallery, Editor, Bookmarks, Expand} from './components/widgets';
 
-
-
-export { GeoJSONLayer, MapView, BasemapGallery };
+export {GeoJSONLayer, MapView, BasemapGallery, Editor, Bookmarks, Expand};

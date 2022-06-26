@@ -1,9 +1,15 @@
-from .BasemapGallery import BasemapGallery
 from .GeoJSONLayer import GeoJSONLayer
 from .MapView import MapView
+from .BasemapGallery import BasemapGallery
+from .Bookmarks import Bookmarks
+from .Editor import Editor
+from .Expand import Expand
 
 __all__ = [
-    "BasemapGallery",
     "GeoJSONLayer",
-    "MapView"
+    "MapView",
+    "BasemapGallery",
+    "Bookmarks",
+    "Editor",
+    "Expand"
 ]

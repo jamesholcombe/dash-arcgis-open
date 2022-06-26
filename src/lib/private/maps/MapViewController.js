@@ -1,7 +1,5 @@
 import {useCallback, useEffect} from 'react';
-import { parseChildrenToArray, renderLayer, renderLayerOrWidget } from '../private/utils';
-
-
+import {parseChildrenToArray, renderLayer, renderLayerOrWidget} from '../utils';
 
 //TODO
 //only pass down the relevant children data, or create state.
@@ -31,10 +29,9 @@ export const MapViewController = ({
 
     // setting props if they are not null, which is the default as we let ArcGIS derive them on initial load
     // if null then we set the dash props to match the ArcGIS props
-    
-    
+
     //constraits is not working
-    
+
     // if (constraints !== null) {
     //     view.constraints = constraints;
     // } else {
@@ -70,8 +67,7 @@ export const MapViewController = ({
     }, [extent]);
 
     //use effect for each layer
-    children.map(child => {
-        
+    children.map((child) => {
         child['map'] = map;
         child['view'] = view;
         useEffect(() => {

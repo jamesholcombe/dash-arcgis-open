@@ -1,6 +1,6 @@
 Package: dashArcgisOpen
 Title: Open Source implementation of Plotly Dash mapping components, powered by the ESRI ArcGIS API for Javascript.
-Version: 0.0.2
+Version: 0.0.3
 Description: Open Source implementation of Plotly Dash mapping components, powered by the ESRI ArcGIS API for Javascript.
 Depends: R (>= 3.0.2)
 Imports: 
