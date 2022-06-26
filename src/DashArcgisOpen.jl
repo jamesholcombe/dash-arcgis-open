@@ -10,6 +10,7 @@ include("jl/mapview.jl")
 include("jl/basemapgallery.jl")
 include("jl/bookmarks.jl")
 include("jl/editor.jl")
+include("jl/expand.jl")
 
 function __init__()
     DashBase.register_package(

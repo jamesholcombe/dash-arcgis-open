@@ -228,7 +228,7 @@
           "raw": "PropTypes.string"
         },
         "required": false,
-        "description": "position of the basemap gallery. Defaults to top-right.",
+        "description": "position of the basemap gallery. Defaults to top-right.\nPossible values: 'bottom-leading', 'bottom-left', 'bottom-right', 'bottom-trailing', 'top-leading', 'top-left', 'top-right', 'top-trailing'. Default: 'top-right'.",
         "defaultValue": {
           "value": "'top-right'",
           "computed": false
@@ -269,6 +269,57 @@
     "displayName": "Editor",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "position": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "position of the basemap gallery. Defaults to top-right.",
+        "defaultValue": {
+          "value": "'top-right'",
+          "computed": false
+        }
+      },
+      "visible": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "Indicates whether the widget is visible."
+      },
+      "label": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The widget's default label."
+      }
+    }
+  },
+  "src/lib/components/widgets/Expand.js": {
+    "description": "",
+    "displayName": "Expand",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "Another widget that will be rendered inside the Expand widget."
+      },
       "id": {
         "type": {
           "name": "custom",

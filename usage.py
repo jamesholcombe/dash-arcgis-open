@@ -1,4 +1,5 @@
-from dash_arcgis_open import MapView, GeoJSONLayer, BasemapGallery, Editor, Bookmarks
+from turtle import position
+from dash_arcgis_open import MapView, GeoJSONLayer, BasemapGallery, Editor, Bookmarks, Expand
 from dash.dependencies import Input, Output, State
 import dash_html_components as html
 import dash_core_components as dcc
@@ -26,10 +27,13 @@ app.layout = html.Div(
                             url="https://raw.githubusercontent.com/martinjc/UK-GeoJSON/master/json/electoral/eng/wards_by_lad/E06000001.json",
                             
                         ),
-                        # BasemapGallery(id = "gallery", position = "top-right", visible = True)
-                       Bookmarks(id = "bookmarks", position = "top-right",editingEnabled = True, visible = True)
+                     
+                    
+                    Expand( children = BasemapGallery(id = "basemap-gallery",  visible = True, position = "top-right"),
 
-                        
+                     
+                        id = "expand", position = "top-left", visible = True, ),
+             
                     ],
                     id="main-map",
                     style={"width": "900px", "height": "900px"},

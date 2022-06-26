@@ -21,7 +21,8 @@ visible=NULL)
 
 \item{label}{The widget's default label.}
 
-\item{position}{position of the basemap gallery. Defaults to top-right.}
+\item{position}{position of the basemap gallery. Defaults to top-right.
+Possible values: 'bottom-leading', 'bottom-left', 'bottom-right', 'bottom-trailing', 'top-leading', 'top-left', 'top-right', 'top-trailing'. Default: 'top-right'.}
 
 \item{visible}{Indicates whether the widget is visible.}
 }

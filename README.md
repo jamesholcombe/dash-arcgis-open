@@ -36,7 +36,7 @@ Current functionality implemented "inspired" by the dash-arcgis documentation.
 - [x] [BasemapGallery](https://dash.plotly.com/dash-arcgis/reference/widgets)
 - [x] [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
 - [x] [Editor](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.editor)
-- [ ] [Expand](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.expand)
+- [x] [Expand](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.expand)
 - [ ] [Home](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.home)
 - [ ] [LayerList](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.layerlist)
 - [ ] [NavigationToggle](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.navigationtoggle)
