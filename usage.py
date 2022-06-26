@@ -29,7 +29,7 @@ app.layout = html.Div(
                         ),
                      
                     
-                    Expand( children = BasemapGallery(id = "basemap-gallery",  visible = True, position = "top-right"),
+                    Expand( children = Bookmarks(id = "basemap-gallery",  visible = True, position = "top-right", editingEnabled=True,),
 
                      
                         id = "expand", position = "top-left", visible = True, ),

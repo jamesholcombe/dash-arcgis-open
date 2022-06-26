@@ -1,40 +1,24 @@
-import { renderLayerOrWidget, resolveChildProps } from "../../private/utils"
-
+import {renderLayerOrWidget, resolveChildProps} from '../../private/utils';
 
 function Expand(props) {
-
-  
-
-    
     //we parse the props from dash.
-   
-
-
 
     renderLayerOrWidget(props);
 
-
-
-
-    return <></>
-
-
+    return <></>;
 }
 
 Expand.defaultProps = {
     position: 'top-right',
-}
+};
 
 Expand.propTypes = {
-   
-    
     /**
      * Another widget that will be rendered inside the Expand widget.
      **/
-    
-    children : PropTypes.string,
-    
-    
+
+    children: PropTypes.string,
+
     /**
      * The ID used to identify this component in Dash callbacks.
      * */
@@ -54,6 +38,6 @@ Expand.propTypes = {
      * The widget's default label.
      * */
     label: PropTypes.string,
-}
+};
 
-export {Expand}
+export {Expand};

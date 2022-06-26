@@ -1,17 +1,10 @@
-
-
-
-
-
 function Editor({id, position, visible, label, ...props}) {
-    return <></>
-
-
+    return <></>;
 }
 
 Editor.defaultProps = {
     position: 'top-right',
-}
+};
 
 Editor.propTypes = {
     /**
@@ -33,8 +26,6 @@ Editor.propTypes = {
      * The widget's default label.
      * */
     label: PropTypes.string,
-}
+};
 
-export {Editor}
-
-   
+export {Editor};

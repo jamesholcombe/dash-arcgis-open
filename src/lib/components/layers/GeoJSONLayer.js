@@ -1,4 +1,4 @@
-function __GeoJSONLayer({id, url, }) {
+function __GeoJSONLayer({id, url}) {
     return <> </>;
 }
 

@@ -41,14 +41,13 @@ async function loadWidget({view, _type, ...props}, addToView = true) {
                 view.ui.add(myWidget, props.position);
             }
 
-            console.log("inside async function: created widget", myWidget);
+            console.log('inside async function: created widget', myWidget);
             return myWidget;
-            
         })
         .catch((err) => console.error(err));
 
-        let myWidget = await myPromise;
-        return myWidget;
+    let myWidget = await myPromise;
+    return myWidget;
 }
 
 function renderLayerOrWidget(props) {
@@ -65,16 +64,12 @@ function renderLayerOrWidget(props) {
             loadWidget(props, true);
             break;
         case 'Expand':
-            
-            
             const innerProps = props.children.props;
             innerProps._type = props.children.type;
             innerProps.view = props.view;
             loadWidget(innerProps, false).then((widget) => {
-              
                 props.content = widget;
                 loadWidget(props, true);
-                
             });
 
             break;

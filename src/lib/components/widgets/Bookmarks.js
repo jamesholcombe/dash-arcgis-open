@@ -1,15 +1,11 @@
-
-
 function Bookmarks({id, position, visible, label, ...props}) {
-    return <></>
-
-
+    return <></>;
 }
 
 Bookmarks.defaultProps = {
     position: 'top-right',
     editingEnabled: true,
-}
+};
 
 Bookmarks.propTypes = {
     /**
@@ -37,11 +33,9 @@ Bookmarks.propTypes = {
      * editingEnabled (boolean; optional): Indicates whether the bookmarks are able to be edited.
      * */
     editingEnabled: PropTypes.bool,
+};
 
-
-}
-
-export {Bookmarks}
+export {Bookmarks};
 
 // id (string; optional): The ID used to identify this component in Dash callbacks.
 
