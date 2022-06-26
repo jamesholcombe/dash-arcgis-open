@@ -19,29 +19,47 @@ This is simply the result of a programmer frustrated by the decision to make Das
 Current functionality implemented "inspired" by the dash-arcgis documentation.
 
 ### Maps
-- [x] [MapView](https://dash.plotly.com/dash-arcgis/reference/maps) 
-- [ ] [SceneView](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.sceneview) 
-- [ ] [Webmap](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webmap)
-- [ ] [WebScene](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webscene)
+:heavy_check_mark: [MapView](https://dash.plotly.com/dash-arcgis/reference/maps) 
+
+:x:[SceneView](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.sceneview) 
+
+:x:[Webmap](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webmap)
+
+:x:[WebScene](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webscene)
 
 ### Layers
-- [x] [GeoJSONLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.geojsonlayer)
-- [ ] [ImageryLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.imagerylayer)
-- [ ] [OGCFeatureLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.ogcfeaturelayer)
-- [ ] [VectorTileLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.vectortilelayer)
-- [ ] [WFSLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.wfslayer)
-- [ ] [WMSLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.wmslayer)
+:heavy_check_mark: [GeoJSONLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.geojsonlayer)
+
+:x: [ImageryLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.imagerylayer)
+
+:x: [OGCFeatureLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.ogcfeaturelayer)
+
+:x: [VectorTileLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.vectortilelayer)
+
+:x: [WFSLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.wfslayer)
+
+:x: [WMSLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.wmslayer)
 
 ### Widgets
-- [x] [BasemapGallery](https://dash.plotly.com/dash-arcgis/reference/widgets)
-- [x] [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
-- [x] [Editor](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.editor)
-- [x] [Expand](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.expand)
-- [ ] [Home](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.home)
-- [ ] [LayerList](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.layerlist)
-- [ ] [NavigationToggle](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.navigationtoggle)
-- [ ] [Print](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.print)
-- [ ] [ScaleBar](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.scalebar)
-- [ ] [TimeSlider](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.timeslider)
-- [ ] [Zoom](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.zoom) 
+:heavy_check_mark: [BasemapGallery](https://dash.plotly.com/dash-arcgis/reference/widgets)
+
+:heavy_check_mark: [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
+
+:heavy_check_mark: [Editor](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.editor)
+
+:heavy_check_mark: [Expand](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.expand)
+
+:x: [Home](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.home)
+
+:x: [LayerList](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.layerlist)
+
+:x: [NavigationToggle](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.navigationtoggle)
+
+:x: [Print](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.print)
+
+:x: [ScaleBar](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.scalebar)
+
+:x: [TimeSlider](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.timeslider)
+
+:x: [Zoom](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.zoom) 
 
