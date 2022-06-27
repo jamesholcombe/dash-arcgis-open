@@ -4,7 +4,7 @@ from dash.dependencies import Input, Output, State
 import dash_html_components as html
 import dash_core_components as dcc
 import dash
-
+import dash_bootstrap_components as dbc
 
 
 SHEETS = ["https://js.arcgis.com/4.23/esri/themes/light/main.css"]
@@ -15,8 +15,7 @@ app.layout = html.Div(
     [
         html.H1("Dash ArcGIS Open"),
         html.Div(id="output-1"),
-        dcc.Input(id="input-x", value=0, type="number"),
-        dcc.Input(id="input-y", value=0, type="number"),
+        dbc.Switch(id = "switch"),
         html.Button(id="button", children="Submit"),
         html.Div(
             [
@@ -27,18 +26,16 @@ app.layout = html.Div(
                             url="https://raw.githubusercontent.com/martinjc/UK-GeoJSON/master/json/electoral/eng/wards_by_lad/E06000001.json",
                             
                         ),
+                        BasemapGallery(id = "basemap-gallery", label = "Basemap Gallery"),
                      
-                    
-                    Expand( children = Bookmarks(id = "basemap-gallery",  visible = True, position = "top-right", editingEnabled=True,),
-
+                
                      
-                        id = "expand", position = "top-left", visible = True, ),
              
                     ],
                     id="main-map",
                     style={"width": "900px", "height": "900px"},
                     center=[0.13, 51.51],
-                    zoom=10,
+                    zoom=25,
                 ),
             ],
         ),
@@ -53,10 +50,18 @@ app.layout = html.Div(
     State("input-y", "value"),
 )
 def move_center(clicks, x, y):
-    print("updating center")
-    print(x, y)
-
+   
     return [x, y]
+
+@app.callback(
+    Output("basemap-gallery", "disabled"),
+    Input("switch", "value")
+)
+def toggle_disabled(value):
+    return value
+
+
+
 
 
 if __name__ == "__main__":

@@ -19,13 +19,13 @@ This is simply the result of a programmer frustrated by the decision to make Das
 Current functionality implemented "inspired" by the dash-arcgis documentation.
 
 ### Maps
-- [x] [MapView](https://dash.plotly.com/dash-arcgis/reference/maps) 
+- :heavy_check_mark: [MapView](https://dash.plotly.com/dash-arcgis/reference/maps) 
 - [ ] [SceneView](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.sceneview) 
 - [ ] [Webmap](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webmap)
 - [ ] [WebScene](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webscene)
 
 ### Layers
-- [x] [GeoJSONLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.geojsonlayer)
+- :heavy_check_mark: [GeoJSONLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.geojsonlayer)
 - [ ] [ImageryLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.imagerylayer)
 - [ ] [OGCFeatureLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.ogcfeaturelayer)
 - [ ] [VectorTileLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.vectortilelayer)
@@ -33,10 +33,10 @@ Current functionality implemented "inspired" by the dash-arcgis documentation.
 - [ ] [WMSLayer](https://dash.plotly.com/dash-arcgis/reference/layers#-dash_arcgis.wmslayer)
 
 ### Widgets
-- [x] [BasemapGallery](https://dash.plotly.com/dash-arcgis/reference/widgets)
-- [x] [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
-- [x] [Editor](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.editor)
-- [x] [Expand](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.expand)
+- :heavy_check_mark: [BasemapGallery](https://dash.plotly.com/dash-arcgis/reference/widgets)
+- :heavy_check_mark: [Bookmarks](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.bookmarks)
+- :heavy_check_mark:[Editor](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.editor)
+- :heavy_check_mark: [Expand](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.expand)
 - [ ] [Home](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.home)
 - [ ] [LayerList](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.layerlist)
 - [ ] [NavigationToggle](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.navigationtoggle)
