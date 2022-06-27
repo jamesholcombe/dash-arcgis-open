@@ -1,5 +1,5 @@
 from turtle import position
-from dash_arcgis_open import MapView, GeoJSONLayer, BasemapGallery, Editor, Bookmarks, Expand
+from dash_arcgis_open import MapView, GeoJSONLayer, BasemapGallery, Editor, Bookmarks, Expand, WebMap
 from dash.dependencies import Input, Output, State
 import dash_html_components as html
 import dash_core_components as dcc
@@ -19,25 +19,11 @@ app.layout = html.Div(
         html.Button(id="button", children="Submit"),
         html.Div(
             [
-                MapView(
-                    children=[
-                        GeoJSONLayer(
-                            id="geojson-layer",
-                            url="https://raw.githubusercontent.com/martinjc/UK-GeoJSON/master/json/electoral/eng/wards_by_lad/E06000001.json",
-                            
-                        ),
-                        
-                        Expand(
-                        BasemapGallery(id = "basemap-gallery", label = "Basemap Gallery"),
-                        )
-                     
-                
-                     
-             
-                    ],
+                WebMap(
+                    portalItem = "41281c51f9de45edaf1c8ed44bb10e30",
                     id="main-map",
                     style={"width": "900px", "height": "900px"},
-                    center=[0.13, 51.51],
+                    # center=[0.13, 51.51],
                     zoom=25,
                 ),
             ],
@@ -46,15 +32,7 @@ app.layout = html.Div(
 )
 
 
-@app.callback(
-    Output("main-map", "center"),
-    Input("button", "n_clicks"),
-    State("input-x", "value"),
-    State("input-y", "value"),
-)
-def move_center(clicks, x, y):
-   
-    return [x, y]
+
 
 @app.callback(
     Output("basemap-gallery", "disabled"),

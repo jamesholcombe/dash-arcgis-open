@@ -2,11 +2,13 @@
 
 export(GeoJSONLayer)
 export(MapView)
+export(WebMap)
 export(BasemapGallery)
 export(Bookmarks)
 export(Editor)
 export(Expand)
 export(baseMapGallery)
+export(webMap)
 export(dashArcgisOpen)
 export(geoJSONLayer)
 export(basemapGallery)

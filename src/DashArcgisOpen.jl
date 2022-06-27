@@ -7,6 +7,7 @@ const version = "0.0.3"
 
 include("jl/geojsonlayer.jl")
 include("jl/mapview.jl")
+include("jl/webmap.jl")
 include("jl/basemapgallery.jl")
 include("jl/bookmarks.jl")
 include("jl/editor.jl")
