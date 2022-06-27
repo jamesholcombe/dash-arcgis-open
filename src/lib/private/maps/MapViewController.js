@@ -1,4 +1,5 @@
 import {useCallback, useEffect} from 'react';
+import {BasemapGallery} from '../../components/widgets';
 import {parseChildrenToArray, renderLayer, renderLayerOrWidget} from '../utils';
 
 //TODO
@@ -66,14 +67,15 @@ export const MapViewController = ({
         setProps({center: view.center});
     }, [extent]);
 
-    //use effect for each layer
+    //use effect for each layer or widget
     children.map((child) => {
-        child['map'] = map;
-        child['view'] = view;
+        child.map = map;
+        child.view = view;
+
         useEffect(() => {
             renderLayerOrWidget(child);
-        }, [id]);
+        }, [child]);
     });
 
-    return null;
+    return <></>;
 };

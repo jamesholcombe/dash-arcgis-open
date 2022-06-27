@@ -19,6 +19,7 @@ This is simply the result of a programmer frustrated by the decision to make Das
 Current functionality implemented "inspired" by the dash-arcgis documentation.
 
 ### Maps
+
 :heavy_check_mark: [MapView](https://dash.plotly.com/dash-arcgis/reference/maps) 
 
 :x:[SceneView](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.sceneview) 
@@ -62,4 +63,5 @@ Current functionality implemented "inspired" by the dash-arcgis documentation.
 :x: [TimeSlider](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.timeslider)
 
 :x: [Zoom](https://dash.plotly.com/dash-arcgis/reference/widgets#-dash_arcgis.zoom) 
+
 

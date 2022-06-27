@@ -7,6 +7,7 @@ import {
     renderLayer,
     resolveChildProps,
 } from '../../private/utils';
+import {BasemapGallery} from '../widgets';
 
 function __MapView({
     id,

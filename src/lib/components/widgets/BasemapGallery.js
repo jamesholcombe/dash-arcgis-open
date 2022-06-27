@@ -1,7 +1,9 @@
 //Adapted from
 //https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html
 
-function BasemapGallery({id}) {
+function BasemapGallery({id, view, label, setProps}) {
+    console.log('BasemapGallery:', id, view, label);
+
     return <></>;
 }
 

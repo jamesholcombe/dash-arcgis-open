@@ -50,7 +50,7 @@ async function loadWidget({view, _type, ...props}, addToView = true) {
     return myWidget;
 }
 
-function renderLayerOrWidget(props) {
+async function renderLayerOrWidget(props) {
     switch (props._type) {
         case 'GeoJSONLayer':
             renderGeoJSONLayer(props);
@@ -61,22 +61,26 @@ function renderLayerOrWidget(props) {
         case 'Home':
         case 'Legend':
         case 'Editor':
-            loadWidget(props, true);
+            let widget = await loadWidget(props, true);
+
             break;
         case 'Expand':
             const innerProps = props.children.props;
             innerProps._type = props.children.type;
             innerProps.view = props.view;
-            loadWidget(innerProps, false).then((widget) => {
+            widgetPromise = loadWidget(innerProps, false).then((widget) => {
                 props.content = widget;
-                loadWidget(props, true);
+                let expandWidget = loadWidget(props, true);
+                return expandWidget;
             });
 
+            widget = await widgetPromise;
             break;
 
         default:
             console.log('layer type not supported');
     }
+    return widget;
 }
 
 export {parseChildrenToArray, resolveChildProps, renderLayerOrWidget};
