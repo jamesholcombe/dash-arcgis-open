@@ -4,8 +4,6 @@
 function BasemapGallery({id, view, label, setProps}) {
     console.log('BasemapGallery:', id, view, label);
 
-
-
     return <></>;
 }
 

@@ -26,7 +26,10 @@ app.layout = html.Div(
                             url="https://raw.githubusercontent.com/martinjc/UK-GeoJSON/master/json/electoral/eng/wards_by_lad/E06000001.json",
                             
                         ),
+                        
+                        Expand(
                         BasemapGallery(id = "basemap-gallery", label = "Basemap Gallery"),
+                        )
                      
                 
                      

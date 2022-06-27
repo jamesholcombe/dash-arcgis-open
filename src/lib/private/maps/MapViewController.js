@@ -1,5 +1,5 @@
 import {useCallback, useEffect} from 'react';
-import { BasemapGallery } from '../../components/widgets';
+import {BasemapGallery} from '../../components/widgets';
 import {parseChildrenToArray, renderLayer, renderLayerOrWidget} from '../utils';
 
 //TODO
@@ -72,11 +72,10 @@ export const MapViewController = ({
         child.map = map;
         child.view = view;
 
-   
         useEffect(() => {
-             renderLayerOrWidget(child);
+            renderLayerOrWidget(child);
         }, [child]);
     });
 
-    return <></>
+    return <></>;
 };

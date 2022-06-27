@@ -61,8 +61,8 @@ async function renderLayerOrWidget(props) {
         case 'Home':
         case 'Legend':
         case 'Editor':
-            let widget = await loadWidget(props, true)
-            
+            let widget = await loadWidget(props, true);
+
             break;
         case 'Expand':
             const innerProps = props.children.props;
@@ -75,7 +75,7 @@ async function renderLayerOrWidget(props) {
             });
 
             widget = await widgetPromise;
-        break;
+            break;
 
         default:
             console.log('layer type not supported');

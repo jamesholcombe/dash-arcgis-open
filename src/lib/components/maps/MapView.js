@@ -7,7 +7,7 @@ import {
     renderLayer,
     resolveChildProps,
 } from '../../private/utils';
-import { BasemapGallery } from '../widgets';
+import {BasemapGallery} from '../widgets';
 
 function __MapView({
     id,
@@ -73,8 +73,6 @@ function __MapView({
 
     return (
         <div style={style}>
-            
-
             <MapViewController
                 map={map}
                 view={mapView}
