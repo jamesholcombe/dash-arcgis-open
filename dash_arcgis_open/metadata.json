@@ -163,6 +163,14 @@
     "displayName": "__WebMap",
     "methods": [],
     "props": {
+      "children": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.oneOfType([\n    PropTypes.arrayOf(PropTypes.node),\n    PropTypes.node,\n])"
+        },
+        "required": false,
+        "description": ""
+      },
       "basemap": {
         "type": {
           "name": "custom",

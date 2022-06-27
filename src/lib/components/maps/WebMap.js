@@ -106,6 +106,10 @@ __WebMap.defaultProps = {
 }
 
  __WebMap.propTypes = {
+    children : PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
     basemap: PropTypes.string,
     center: PropTypes.array,
     zoom: PropTypes.number,

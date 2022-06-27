@@ -20,6 +20,7 @@ app.layout = html.Div(
         html.Div(
             [
                 WebMap(
+                    [Expand(BasemapGallery())],
                     portalItem = "41281c51f9de45edaf1c8ed44bb10e30",
                     id="main-map",
                     style={"width": "900px", "height": "900px"},

@@ -4,10 +4,14 @@ export webmap
 
 """
     webmap(;kwargs...)
+    webmap(children::Any;kwargs...)
+    webmap(children_maker::Function;kwargs...)
+
 
 A WebMap component.
 
 Keyword arguments:
+- `children` (optional)
 - `id` (optional)
 - `basemap` (optional)
 - `breakpoints` (optional)
@@ -21,8 +25,11 @@ Keyword arguments:
 - `zoom` (optional)
 """
 function webmap(; kwargs...)
-        available_props = Symbol[:id, :basemap, :breakpoints, :center, :constraints, :extent, :heightBreakpoint, :portalItem, :style, :widthBreakpoint, :zoom]
+        available_props = Symbol[:children, :id, :basemap, :breakpoints, :center, :constraints, :extent, :heightBreakpoint, :portalItem, :style, :widthBreakpoint, :zoom]
         wild_props = Symbol[]
         return Component("webmap", "WebMap", "dash_arcgis_open", available_props, wild_props; kwargs...)
 end
+
+webmap(children::Any; kwargs...) = webmap(;kwargs..., children = children)
+webmap(children_maker::Function; kwargs...) = webmap(children_maker(); kwargs...)
 

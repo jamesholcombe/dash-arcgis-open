@@ -10,12 +10,15 @@
 }
 
 \usage{
-webMap(id=NULL, basemap=NULL, breakpoints=NULL, center=NULL,
-constraints=NULL, extent=NULL, heightBreakpoint=NULL,
-portalItem=NULL, style=NULL, widthBreakpoint=NULL, zoom=NULL)
+webMap(children=NULL, id=NULL, basemap=NULL, breakpoints=NULL,
+center=NULL, constraints=NULL, extent=NULL,
+heightBreakpoint=NULL, portalItem=NULL, style=NULL,
+widthBreakpoint=NULL, zoom=NULL)
 }
 
 \arguments{
+\item{children}{}
+
 \item{id}{}
 
 \item{basemap}{}
