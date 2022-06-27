@@ -1,3 +1,4 @@
 import {MapView} from './MapView';
+import {WebMap} from './WebMap';
 
-export {MapView};
+export {MapView, WebMap};

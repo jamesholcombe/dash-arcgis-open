@@ -158,6 +158,121 @@
       }
     }
   },
+  "src/lib/components/maps/WebMap.js": {
+    "description": "",
+    "displayName": "__WebMap",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.oneOfType([\n    PropTypes.arrayOf(PropTypes.node),\n    PropTypes.node,\n])"
+        },
+        "required": false,
+        "description": ""
+      },
+      "basemap": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'topo-vector'",
+          "computed": false
+        }
+      },
+      "center": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.array"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[-118.24, 34.05]",
+          "computed": false
+        }
+      },
+      "zoom": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "10",
+          "computed": false
+        }
+      },
+      "portalItem": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "breakpoints": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.array"
+        },
+        "required": false,
+        "description": ""
+      },
+      "extent": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.array"
+        },
+        "required": false,
+        "description": ""
+      },
+      "constraints": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.array"
+        },
+        "required": false,
+        "description": ""
+      },
+      "widthBreakpoint": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "heightBreakpoint": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
   "src/lib/components/widgets/BasemapGallery.js": {
     "description": "",
     "displayName": "BasemapGallery",
