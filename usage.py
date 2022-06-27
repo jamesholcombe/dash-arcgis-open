@@ -7,33 +7,26 @@ import dash
 import dash_bootstrap_components as dbc
 
 
-SHEETS = ["https://js.arcgis.com/4.23/esri/themes/light/main.css"]
 
-app = dash.Dash(__name__, external_stylesheets=SHEETS)
+app = dash.Dash(__name__, external_stylesheets=["https://js.arcgis.com/4.23/esri/themes/light/main.css"])
 
 app.layout = html.Div(
     [
         html.H1("Dash ArcGIS Open"),
-        html.Div(id="output-1"),
         dbc.Switch(id = "switch"),
-        html.Button(id="button", children="Submit"),
         html.Div(
             [
                 WebMap(
-                    [Expand(BasemapGallery())],
+                    
                     portalItem = "41281c51f9de45edaf1c8ed44bb10e30",
                     id="main-map",
                     style={"width": "900px", "height": "900px"},
-                    # center=[0.13, 51.51],
-                    zoom=25,
+                    zoom=5,
                 ),
             ],
         ),
     ]
 )
-
-
-
 
 @app.callback(
     Output("basemap-gallery", "disabled"),
