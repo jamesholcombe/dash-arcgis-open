@@ -22,9 +22,10 @@ Current functionality implemented "inspired" by the dash-arcgis documentation.
 
 :heavy_check_mark: [MapView](https://dash.plotly.com/dash-arcgis/reference/maps) 
 
+:heavy_check_mark: [Webmap](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webmap)
+
 :x:[SceneView](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.sceneview) 
 
-:x:[Webmap](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webmap)
 
 :x:[WebScene](https://dash.plotly.com/dash-arcgis/reference/maps#-dash_arcgis.webscene)
 
