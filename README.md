@@ -13,7 +13,7 @@ pip install dash-arcgis-open
 
 **This library is not in any way affiliated with either ESRI or Plotly.**
 
-This is simply the result of a programmer frustrated by the decision to make Dash ArcGIS a part of the pay-to-use Dash Enterprise. Contributions are more than welcome.
+Contributions welcome.
 
 ## Resources 
 
